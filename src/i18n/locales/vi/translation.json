@@ -1,0 +1,394 @@
+{
+  "header": {
+    "home": "TRANG CHỦ",
+    "introduce": "GIỚI THIỆU",
+    "topic": "CHỦ ĐỀ",
+    "service": "DỊCH VỤ",
+    "community": "CỘNG ĐỒNG",
+    "contact": "LIÊN HỆ",
+    "company": "MONEYWISE VN",
+    "employee": "Đội Ngũ",
+    "whereMoney": "Tiền ở đâu",
+    "retire55": "Nghỉ hưu 55",
+    "lifetimeMoney": "Tiền cả đời",
+    "facebook": "Facebook",
+    "youtube": "Youtube",
+    "language": {
+      "vietnamese": "Tiếng Việt",
+      "english": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title1": "CHÚNG TÔI GIÚP MỌI NGƯỜI TIẾT KIỆM VÀ",
+  
+      "title2": "DOANH NGHIỆP PHÁT TRIỂN ",
+      "title3": "SỰ TỰ TIN TÀI CHÍNH.",
+      "subtitle": "Kế Hoạch Tài Chính Cá Nhân Hóa, Được Hỗ Trợ Bởi Các Chuyên Gia Được Chứng Nhận.",
+      "startFree": "Bắt Đầu Miễn Phí",
+      "bookSession": "Đặt Lịch Tư Vấn"
+    },
+    "aboutUs": {
+      "title": "Về Chúng Tôi",
+      "monthlyMembers": "Thành Viên Hàng Tháng",
+      "reviews": "8000+ đánh giá",
+      "description1": "Chào mừng đến với",
+      "description2": "Chúng tôi tồn tại để trao quyền cho người Việt Nam kiểm soát cuộc sống tài chính của họ—bằng cách xây dựng thói quen thông minh, tăng cường sự tự tin và áp dụng tư duy tiền bạc hiện đại. Chúng tôi tin rằng hiểu biết tài chính là nền tảng cho sự tự tin, ổn định và hạnh phúc lâu dài. Đó là lý do tại sao chúng tôi tập trung vào:",
+      "point1": "📈 Tăng cường hiểu biết tài chính thông qua huấn luyện thực tế, cá nhân hóa",
+      "point2": "🧭 Xây dựng hệ thống dựa trên niềm tin cho các quyết định tiền bạc tự tin",
+      "point3": "💡 Bản địa hóa các chiến lược toàn cầu cho nhu cầu tài chính cá nhân của Việt Nam",
+      "point4": "🌱 Trao quyền cho các cá nhân và gia đình hướng tới sức khỏe tài chính lâu dài",
+      "explore": "KHÁM PHÁ"
+    },
+    "whatWeDo": {
+      "title": "Chúng tôi làm gì",
+      "subtitle": "Chúng tôi giúp các khách hàng cá nhân và doanh nghiệp trả lời ba câu hỏi quan trọng định hình tương lai tài chính của họ.",
+      "service1": {
+        "title": "Tối ưu hóa dòng vốn",
+        "desc": "Phân tích và tái cấu trúc ngân sách, tối ưu hóa chi tiêu và tối đa hóa hiệu quả tài chính để phát triển."
+      },
+      "service2": {
+        "title": "Bảo Đảm Tài Sản Tương Lai",
+        "desc": "Xây dựng một kế hoạch chiến lược, cá nhân hóa cho việc tích lũy tài sản lâu dài và độc lập tài chính sớm."
+      },
+      "service3": {
+        "title": "Dòng Thu Nhập Bền Vững",
+        "desc": "Tạo ra các dòng thu nhập bền vững cho tương lai tài chính an toàn."
+      }
+    },
+    "featuredNews": {
+      "title": "Tin Tức Nổi Bật",
+      "subtitle": "Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "news1": {
+        "title": "Tôi Có Thể Nghỉ Hưu Ở Tuổi 55 Tại Việt Nam Không?",
+        "category": "Tài Chính",
+        "desc": "Nghỉ hưu ở tuổi 55 tại Việt Nam là một mục tiêu có thể đạt được, nhưng nó phụ thuộc vào việc đạt được một con số tài chính cụ thể, không chỉ là tuổi tác. Nó đòi hỏi kế hoạch có kỷ luật để tích lũy một khoản tiết kiệm trị giá khoảng 25 lần chi phí sinh hoạt hàng năm của bạn."
+      },
+      "news2": {
+        "title": "3 Sai Lầm Tiền Bạc Phổ Biến",
+        "category": "Kinh Doanh",
+        "desc": "Tránh những cạm bẫy phổ biến này để đảm bảo tương lai tài chính của bạn."
+      },
+      "news3": {
+        "title": "Tại Sao Hiểu Biết Tài Chính Là Chìa Khóa Cho Nhân Viên Của Bạn?",
+        "category": "Đầu Tư",
+        "desc": "Căng thẳng tài chính của nhân viên ảnh hưởng trực tiếp đến sự tập trung và năng suất của họ trong công việc. Bài viết này cho rằng việc cung cấp giáo dục tài chính là một khoản đầu tư chiến lược cho các công ty."
+      },
+      "news4": {
+        "title": "Hướng Dẫn Cho Người Mới Bắt Đầu Xây Dựng Tài Sản",
+        "category": "Thị Trường",
+        "desc": "Xây dựng tài sản là một hành trình đòi hỏi kiến thức, kỷ luật và một kế hoạch vững chắc. Hướng dẫn này bao gồm các bước thiết yếu để bắt đầu hành trình xây dựng tài sản của bạn."
+      },
+      "news5": {
+        "title": "Tiền Trọn Đời: Lập Kế Hoạch Cho An Ninh Tài Chính",
+        "category": "Tài Chính",
+        "desc": "Tiền Trọn Đời là về việc tạo ra một kế hoạch tài chính bền vững đảm bảo an ninh và sự yên tâm suốt đời. Bài viết này khám phá các chiến lược để đạt được mục tiêu này."
+      },
+      "news6": {
+        "title": "Bắt Đầu Tiến Bộ Về Tài Chính Cá Nhân Của Bạn",
+        "category": "Cá Nhân",
+        "desc": "Bắt đầu hành trình tài chính cá nhân của bạn với các bước đơn giản và hiệu quả để quản lý tiền bạc tốt hơn."
+      },
+      "readMore": "Đọc Thêm »",
+      "viewAll": "Xem Tất Cả"
+    },
+    "testimonials": {
+      "title": "Điều Gì Làm Chúng Tôi Khác Biệt",
+      "subtitle": "Phản hồi từ khách hàng đã sử dụng dịch vụ của chúng tôi",
+      "testimonial1": {
+        "content": "MoneyWise đã giúp gia đình tôi suy nghĩ lại cách chúng tôi quản lý tiền bạc mỗi ngày. Những lời khuyên thiết lập mục tiêu của họ khiến việc tiết kiệm cho tương lai trở nên khả thi.",
+        "name": "John Smith",
+        "title": "Giám đốc điều hành của Công ty ABC"
+      },
+      "testimonial2": {
+        "content": "Hợp tác với MoneyWise Việt Nam đã thay đổi cách nhân viên của chúng tôi nghĩ về tiền bạc. Các buổi hội thảo rất hấp dẫn và thực tế.",
+        "name": "Jane Doe",
+        "title": "Giám đốc của Công ty XYZ"
+      },
+      "testimonial3": {
+        "content": "Tôi đã giới thiệu nó cho nhiều bạn bè và đồng nghiệp—một khi bạn thấy tác động, bạn muốn người khác cũng được hưởng lợi.",
+        "name": "Robert Johnson",
+        "title": "Giám đốc công nghệ của Công ty DEF"
+      }
+    },
+    "bannerBottom": {
+      "title": "Hãy Cùng Làm Việc",
+      "subtitle": "Bắt đầu hành trình độc lập tài chính của bạn ngay hôm nay",
+      "placeholder": "Nhập email của bạn",
+      "button": "Bắt Đầu"
+    },
+    "banner": {
+      "consults": "Tư Vấn",
+      "goalsMet": "Mục Tiêu Đạt Được",
+      "coaches": "Chuyên Gia",
+      "coachingHours": "Giờ Huấn Luyện"
+    },
+    "ourServices": {
+      "title": "Dịch Vụ Của Chúng Tôi",
+      "services": [
+        {
+          "title": "Huấn Luyện Tài Chính Cá Nhân",
+          "desc": "Hướng dẫn khách hàng đạt các mục tiêu tài chính thông qua giáo dục và trách nhiệm."
+        },
+        {
+          "title": "Chiến Lược Tài Sản",
+          "desc": "Lập kế hoạch toàn diện cho việc phát triển, bảo vệ và chuyển nhượng tài sản tài chính một cách hiệu quả."
+        },
+        {
+          "title": "Quản Lý Rủi Ro",
+          "desc": "Xác định, đánh giá và giảm thiểu các mối đe dọa để bảo vệ tài sản và thu nhập."
+        },
+        {
+          "title": "Kế Hoạch Nghỉ Hưu",
+          "desc": "Đảm bảo tương lai của bạn với chiến lược nghỉ hưu chuyên nghiệp."
+        },
+        {
+          "title": "Phân Tích Thông Minh",
+          "desc": "Thông tin chi tiết dựa trên dữ liệu cho quyết định tài chính sáng suốt."
+        },
+        {
+          "title": "Tư Vấn Doanh Nghiệp SME",
+          "desc": "Hướng dẫn chuyên nghiệp cho doanh nghiệp vừa và nhỏ."
+        }
+      ]
+    },
+    "contactUs": {
+      "title": "Liên Hệ Chúng Tôi",
+      "subtitle": "Để lại thông tin của bạn, và chúng tôi sẽ liên hệ lại với bạn càng sớm càng tốt",
+      "contactInfo": "Thông Tin Liên Hệ",
+      "address": "3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM",
+      "email": "contact@moneywise.vn",
+      "formTitle": "Gửi tin nhắn cho chúng tôi",
+      "form": {
+        "fullName": "Họ và tên *",
+        "email": "Email *",
+         "phone": "Số điện thoại",
+        "subject": "Chủ đề",
+        "message": "Nội dung *",
+        "submit": "Gửi Tin Nhắn "
+      },
+      "note": {
+        "title": "Lưu Ý Quan Trọng:",
+        "message": "Nội dung trên trang web này chỉ là thông tin tham khảo, không phải lời khuyên tài chính cá nhân. Bạn hoàn toàn chịu trách nhiệm cho mọi quyết định và rủi ro của mình. Việc sử dụng trang web đồng nghĩa bạn chấp nhận các điều khoản của chúng tôi."
+      }
+    }
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "contactInfo": "Thông Tin Liên Hệ",
+    "address": "3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM",
+    "email": "contact@moneywise.vn",
+    "sendMessage": "Gửi tin nhắn cho chúng tôi",
+    "form": {
+      "fullName": "Họ và tên *",
+      "email": "Email *",
+      "phone": "Số điện thoại",
+      "subject": "Chủ đề",
+      "message": "Nội dung *",
+      "submit": "Gửi Tin Nhắn →",
+      "name": "Họ và tên",
+      "content": "Nội dung",
+      "newsletter": "Tôi muốn nhận bản tin",
+      "send": "Gửi"
+    },
+    "importantNote": "Lưu Ý Quan Trọng:",
+    "noteText": "Vui lòng chỉ gửi các yêu cầu liên quan đến công việc, các nội dung rác sẽ bị xóa mà không cần thông báo.",
+    "leaveInfo": "Để lại thông tin tư vấn",
+    "addressAlt": "3 Nguyễn Cơ Thạch, An Khánh, TP.HCM"
+  },
+  "introduce": {
+    "description": "Đây là trang tổng quan về công ty và đội ngũ của chúng tôi.",
+    "aboutCompany": "Về Công Ty",
+    "aboutTeam": "Về Đội Ngũ",
+    "hero": {
+      "title": "Về Chúng Tôi",
+      "subtitle": "Khám phá sứ mệnh và giá trị của chúng tôi"
+    },
+    "employee": {
+      "title": "Đội Ngũ Của Chúng Tôi",
+      "subtitle": "Khám phá sứ mệnh và giá trị của chúng tôi",
+      "otherEmployees": "Nhân viên khác",
+      "members": {
+        "larry-truong": {
+          "name": "Larry Trương",
+          "role": "Giám đốc điều hành",
+          "bio": "Larry Truong – Huấn Luyện Viên Tài Chính & Giám Đốc Điều Hành\nLarry Truong là một chuyên gia dày dạn kinh nghiệm trong lĩnh vực tài chính cá nhân, với hơn 30 năm kinh nghiệm trên cả thị trường toàn cầu và địa phương—bao gồm hai thập kỷ tham gia sâu rộng vào bối cảnh dịch vụ tài chính đang phát triển của Việt Nam. Ông lãnh đạo MoneyWise Việt Nam với trọng tâm cung cấp các giải pháp tài chính cá nhân thực tế, tác động cao phù hợp với nhu cầu của cá nhân và doanh nghiệp Việt Nam. Các chương trình phát triển chuyên nghiệp mà ông và nhóm của mình triển khai đã trao quyền cho hơn 50.000 cố vấn tài chính, quản lý bán hàng và 1.000 nhân viên thông qua các hệ thống học tập chuyển đổi—thiết lập các tiêu chuẩn chuyên nghiệp mới trên toàn ngành."
+        },
+        "tran-thi-b": {
+          "name": "Trần Thị B",
+          "role": "Huấn luyện viên tài chính",
+          "bio": "Nội dung giới thiệu Huấn luyện viên tài chính ở đây..."
+        },
+        "le-van-c": {
+          "name": "Lê Văn C",
+          "role": "Trưởng nhóm cộng đồng",
+          "bio": "Nội dung giới thiệu Trưởng nhóm cộng đồng ở đây..."
+        },
+        "pham-thi-d": {
+          "name": "Phạm Thị D",
+          "role": "Lập trình viên",
+          "bio": "Nội dung giới thiệu Lập trình viên ở đây..."
+        },
+        "hoang-van-e": {
+          "name": "Hoàng Văn E",
+          "role": "Marketing",
+          "bio": "Nội dung giới thiệu Marketing ở đây..."
+        }
+      }
+    },
+    "content": {
+      "title": "CÔNG TY TƯ VẤN TÀI CHÍNH MONEYWISE",
+      "intro1": "Công ty Tư vấn Tài chính MoneyWise được thành lập vào năm 2018 với sự cống hiến của đội ngũ chuyên gia có hơn",
+      "intro2": "40 năm kinh nghiệm",
+      "intro3": "trong các lĩnh vực tài chính, ngân hàng, đầu tư và quản trị doanh nghiệp.",
+      "intro4": "MoneyWise tự hào có đội ngũ chuyên gia xuất sắc, giàu kinh nghiệm, năng động và tận tâm trong việc phân tích, lập kế hoạch và cung cấp các giải pháp tài chính tối ưu cho khách hàng cá nhân và doanh nghiệp.",
+      "location1": "Với lợi thế có 2 văn phòng tại",
+      "location2": "Hà Nội",
+      "location3": "và",
+      "location4": "Thành phố Hồ Chí Minh",
+      "location5": ", MoneyWise mang đến sự thuận tiện trong việc gặp gỡ, trao đổi và tư vấn trực tiếp.",
+      "consultingTitle": "CÁC LĨNH VỰC TƯ VẤN TẠI MONEYWISE",
+      "consulting1": "Tư vấn đầu tư cá nhân & doanh nghiệp:",
+      "consulting1Desc": "phân tích thị trường, cơ hội đầu tư, quản lý rủi ro.",
+      "consulting2": "Tư vấn quản lý tài chính doanh nghiệp:",
+      "consulting2Desc": "cơ cấu vốn, dòng tiền, kế hoạch mở rộng kinh doanh.",
+      "consulting3": "Tư vấn vay vốn & tín dụng:",
+      "consulting3Desc": "giải pháp tiếp cận nguồn vốn, tối ưu chi phí vay.",
+      "consulting4": "Tư vấn bảo hiểm & hưu trí:",
+      "consulting4Desc": "kế hoạch bảo vệ tài sản, đảm bảo an toàn lâu dài.",
+      "consulting5": "Tư vấn quản lý tài sản cá nhân:",
+      "consulting5Desc": "tiết kiệm, đầu tư và tích lũy cho tương lai.",
+      "consulting6": "Tư vấn thuế & pháp lý tài chính:",
+      "consulting6Desc": "tuân thủ quy định, tối ưu chi phí hợp pháp.",
+      "coreValuesTitle": "GIÁ TRỊ CỐT LÕI CỦA MONEYWISE",
+      "coreValuesIntro": "Trong suốt những năm hoạt động, MoneyWise luôn lấy phương châm",
+      "coreValuesMotto": "\"TÂM - TẦM - TÀI - TIN\"",
+      "coreValuesGuide": "làm kim chỉ nam:",
+      "value1": "TÂM:",
+      "value1Desc": "Trách nhiệm, tận tâm, đặt lợi ích khách hàng lên hàng đầu.",
+      "value2": "TẦM:",
+      "value2Desc": "Hướng tới trở thành công ty tư vấn tài chính đa dịch vụ.",
+      "value3": "TÀI:",
+      "value3Desc": "Đội ngũ chuyên gia với kiến thức & kinh nghiệm sâu rộng.",
+      "value4": "TIN:",
+      "value4Desc": "Xây dựng uy tín, trở thành đối tác tin cậy của khách hàng."
+    }
+  },
+  "community": {
+    "title": "Chào Mừng Đến Với Trang Cộng Đồng"
+  },
+  "service": {
+    "title": "Dịch vụ A",
+    "company": "Công ty Tư vấn Tài chính MoneyWise",
+    "description1": "Công ty Tư vấn Tài chính MoneyWise được thành lập năm 2018 với sự hợp tác...",
+    "description2": "Với trụ sở tại Hà Nội và TP. HCM, MoneyWise giúp khách hàng...",
+    "otherServices": {
+      "title": "Các dịch vụ khác:",
+      "viewAll": "Xem tất cả"
+    },
+    "services": [
+      {
+        "title": "Kiểm toán chi phí tài chính",
+        "description": "Phân tích chi phí tài chính và tư vấn..."
+      },
+      {
+        "title": "Tư vấn chiến lược đầu tư",
+        "description": "Giải pháp chiến lược đầu tư tối ưu..."
+      },
+      {
+        "title": "Quản lý tài chính cá nhân",
+        "description": "Giúp bạn kiểm soát chi tiêu và tiết kiệm..."
+      }
+    ]
+  },
+  "topic": {
+    "search": "Tìm kiếm bài viết...",
+    "viewMore": "Xem tiếp →",
+    "notFound": "❌ Topic không tồn tại!",
+    "post": "Bài viết",
+    "otherPosts": "Bài viết khác",
+    "lifetimeMoney": {
+      "title": "Tiền trọn đời",
+      "subtitle": "Giải pháp tài chính bền vững, an toàn trọn đời",
+      "posts": {
+        "1": {
+          "title": "Chiến lược tài chính lâu dài",
+          "excerpt": "Cách phân bổ vốn và đầu tư để đảm bảo an toàn trọn đời..."
+        },
+        "2": {
+          "title": "Video chia sẻ từ chuyên gia",
+          "excerpt": "Xem video phân tích kế hoạch nghỉ hưu..."
+        },
+        "3": {
+          "title": "Đầu tư thông minh",
+          "excerpt": "Những nguyên tắc vàng..."
+        },
+        "4": {
+          "title": "Quản lý rủi ro",
+          "excerpt": "Làm thế nào để bảo vệ tài sản..."
+        },
+        "5": {
+          "title": "Lập kế hoạch thuế",
+          "excerpt": "Tối ưu hóa thuế cho cá nhân..."
+        },
+        "6": {
+          "title": "Tiết kiệm hiệu quả",
+          "excerpt": "Mẹo nhỏ để tăng quỹ tiết kiệm..."
+        },
+        "7": {
+          "title": "Tài chính gia đình",
+          "excerpt": "Cách quản lý tài chính chung..."
+        },
+        "8": {
+          "title": "Thị trường chứng khoán",
+          "excerpt": "Xu hướng và cơ hội đầu tư..."
+        },
+        "9": {
+          "title": "Bất động sản",
+          "excerpt": "Đầu tư vào nhà đất như thế nào..."
+        },
+        "10": {
+          "title": "Quỹ hưu trí",
+          "excerpt": "Lựa chọn quỹ phù hợp với bạn..."
+        }
+      }
+    },
+    "retire55": {
+      "title": "Hưu trí tuổi 55",
+      "subtitle": "Chuẩn bị kế hoạch tài chính vững chắc để nghỉ hưu an nhàn",
+      "posts": {
+        "1": {
+          "title": "Làm thế nào để về hưu sớm?",
+          "excerpt": "Các bước cần thiết để có thể nghỉ hưu trước tuổi 55..."
+        }
+      }
+    },
+    "whereMoney": {
+      "title": "Tiền đâu rồi?",
+      "subtitle": "Khám phá cách quản lý tiền bạc thông minh cho tương lai",
+      "posts": {
+        "1": {
+          "title": "Theo dõi chi tiêu hiệu quả",
+          "excerpt": "Ứng dụng và mẹo nhỏ giúp quản lý chi tiêu hàng ngày..."
+        }
+      }
+    },
+    "readMore": "Đọc thêm",
+    "viewAll": "Xem Tất Cả Bài Viết"
+  },
+  "footer": {
+    "companyDescription": "Chúng tôi ở đây để giúp bạn phát triển với sự tự tin.",
+    "services": "Dịch Vụ",
+    "service1": "Tư Vấn Tài Chính",
+    "service2": "Quản Lý Tài Sản",
+    "service3": "Giáo Dục Tài Chính",
+    "service4": "Kế Hoạch Hưu Trí",
+    "service5": "Tư Vấn SME",
+    "contact": "Liên Hệ",
+    "address": "3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM",
+    "email": "contact@moneywise.vn",
+    "copyright": "© 2025 MoneyWise. Bản quyền đã được bảo lưu.",
+    "privacyPolicy": "Chính Sách Bảo Mật",
+    "termsOfUse": "Điều Khoản Sử Dụng"
+  }
+}

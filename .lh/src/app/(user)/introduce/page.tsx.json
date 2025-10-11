@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/(user)/introduce/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1760082740135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1760082740135,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport Link from \"next/link\";\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\nexport default function IntroducePage() {\r\n  const { t } = useLanguage();\r\n  \r\n  return (\r\n    <div className=\"w-full h-full flex flex-col items-center justify-center p-6\">\r\n        <p className=\"text-lg text-gray-700 mb-6\">\r\n          {t(\"introduce.description\")}\r\n        </p>\r\n        <div className=\"flex gap-4\">\r\n          <Link\r\n            href=\"/introduce/company\"\r\n            className=\"px-4 py-2 bg-green-700 text-white rounded-md hover:bg-green-800\"\r\n          >\r\n            {t(\"introduce.aboutCompany\")}\r\n          </Link>\r\n          <Link\r\n            href=\"/introduce/employee\"\r\n            className=\"px-4 py-2 bg-green-700 text-white rounded-md hover:bg-green-800\"\r\n          >\r\n            {t(\"introduce.aboutTeam\")}\r\n          </Link>\r\n        </div>\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

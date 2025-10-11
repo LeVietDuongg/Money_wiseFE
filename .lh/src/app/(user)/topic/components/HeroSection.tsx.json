@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/(user)/topic/components/HeroSection.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1760079178934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1760079178934,
+            "name": "Commit-0",
+            "content": "import Image, { StaticImageData } from \"next/image\";\r\n\r\ntype HeroProps = {\r\n  image: StaticImageData | string;\r\n  title: string;\r\n  subtitle: string;\r\n};\r\n\r\nexport default function HeroSection({ image, title, subtitle }: HeroProps) {\r\n  return (\r\n    <section className=\"relative w-full\">\r\n      <div className=\"relative w-full aspect-[16/9] sm:aspect-[1200/380] max-h-[380px]\">\r\n        <Image\r\n          src={image}\r\n          alt={title}\r\n          fill\r\n          priority\r\n          className=\"object-cover\"\r\n        />\r\n\r\n        {/* Overlay chữ */}\r\n        <div className=\"absolute inset-0 flex flex-col items-start justify-center text-left px-4 sm:px-8 md:px-12\">\r\n          <h1 className=\"text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg\">\r\n            {title}\r\n          </h1>\r\n          <p className=\"mt-2 text-sm sm:text-base md:text-lg text-white drop-shadow-md max-w-xl\">\r\n            {subtitle}\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

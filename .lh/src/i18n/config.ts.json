@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/i18n/config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1759725500888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1759725500888,
+            "name": "Commit-0",
+            "content": "import i18n from 'i18next';\r\nimport { initReactI18next } from 'react-i18next';\r\nimport LanguageDetector from 'i18next-browser-languagedetector';\r\n\r\nimport enTranslation from './locales/en/translation.json';\r\nimport viTranslation from './locales/vi/translation.json';\r\n\r\ni18n\r\n  .use(LanguageDetector)\r\n  .use(initReactI18next)\r\n  .init({\r\n    resources: {\r\n      en: {\r\n        translation: enTranslation,\r\n      },\r\n      vi: {\r\n        translation: viTranslation,\r\n      },\r\n    },\r\n    fallbackLng: 'vi',\r\n    lng: 'vi',\r\n    debug: false,\r\n    interpolation: {\r\n      escapeValue: false,\r\n    },\r\n  });\r\n\r\nexport default i18n;\r\n"
+        }
+    ]
+}

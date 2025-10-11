@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/contexts/LanguageContext.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1759725501195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1759725501195,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport React, { createContext, useContext, useEffect, useState } from 'react';\r\nimport { useTranslation } from 'react-i18next';\r\nimport '../i18n/config';\r\n\r\ntype Language = 'en' | 'vi';\r\n\r\ninterface LanguageContextType {\r\n  language: Language;\r\n  setLanguage: (lang: Language) => void;\r\n  t: (key: string) => string;\r\n}\r\n\r\nconst LanguageContext = createContext<LanguageContextType | undefined>(undefined);\r\n\r\nexport function LanguageProvider({ children }: { children: React.ReactNode }) {\r\n  const { i18n, t } = useTranslation();\r\n  const [language, setLanguageState] = useState<Language>('vi');\r\n\r\n  useEffect(() => {\r\n    // Load saved language from localStorage\r\n    const savedLanguage = localStorage.getItem('language') as Language | null;\r\n    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'vi')) {\r\n      setLanguageState(savedLanguage);\r\n      i18n.changeLanguage(savedLanguage);\r\n    }\r\n  }, [i18n]);\r\n\r\n  const setLanguage = (lang: Language) => {\r\n    setLanguageState(lang);\r\n    i18n.changeLanguage(lang);\r\n    localStorage.setItem('language', lang);\r\n  };\r\n\r\n  return (\r\n    <LanguageContext.Provider value={{ language, setLanguage, t }}>\r\n      {children}\r\n    </LanguageContext.Provider>\r\n  );\r\n}\r\n\r\nexport function useLanguage() {\r\n  const context = useContext(LanguageContext);\r\n  if (context === undefined) {\r\n    throw new Error('useLanguage must be used within a LanguageProvider');\r\n  }\r\n  return context;\r\n}\r\n"
+        }
+    ]
+}

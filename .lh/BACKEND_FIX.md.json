@@ -1,0 +1,18 @@
+{
+    "sourceFile": "BACKEND_FIX.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1760088159238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1760088159238,
+            "name": "Commit-0",
+            "content": "# Backend CORS Fix\r\n\r\nThay đổi trong file `app.ts` của backend:\r\n\r\n```typescript\r\n// ✅ CORS cấu hình cho phép nhiều origin trong dev\r\nconst allowedOrigins = [\r\n  process.env.ADMIN_UI_ORIGIN || \"http://localhost:3000\",\r\n  \"http://localhost:3001\",\r\n  \"http://localhost:3000\",\r\n  \"http://127.0.0.1:3000\",\r\n  \"http://127.0.0.1:3001\",\r\n];\r\n\r\napp.use(\r\n  cors({\r\n    origin: (origin, callback) => {\r\n      // Allow requests with no origin (mobile apps, Postman, etc.)\r\n      if (!origin || allowedOrigins.includes(origin)) {\r\n        callback(null, true);\r\n      } else {\r\n        callback(new Error(\"Not allowed by CORS\"));\r\n      }\r\n    },\r\n    credentials: true,\r\n    methods: [\"GET\", \"POST\", \"PUT\", \"DELETE\", \"OPTIONS\"],\r\n    allowedHeaders: [\"Content-Type\", \"Authorization\"],\r\n  })\r\n);\r\n```\r\n\r\nSau đó restart backend server.\r\n"
+        }
+    ]
+}

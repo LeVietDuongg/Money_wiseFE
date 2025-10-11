@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/(user)/topic/[slug]/post/[id]/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1760079062645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760080059326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         />\r\n       ) : (\r\n         post.image && (\r\n           <img\r\n-            src={post.image}\r\n+            src={typeof post.image === 'string' ? post.image : post.image.src}\r\n             alt={post.title}\r\n             className=\"w-full rounded-lg shadow\"\r\n           />\r\n         )\r\n"
+                }
+            ],
+            "date": 1760079062645,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport { useEffect, useState } from \"react\";\r\nimport { useParams, notFound } from \"next/navigation\";\r\nimport { postService } from \"@/services/post.service\";\r\nimport { topicService } from \"@/services/topic.service\";\r\nimport { Post, Topic } from \"@/types/topic\";\r\nimport DifferentPost from \"../../../components/DifferentPost\";\r\nimport Contact from \"@/components/Contact\";\r\n\r\nexport default function PostPage() {\r\n  const params = useParams<{ slug: string; id: string }>();\r\n  const { id, slug } = params;\r\n\r\n  const [post, setPost] = useState<Post | null>(null);\r\n  const [relatedPosts, setRelatedPosts] = useState<Post[]>([]);\r\n\r\n  useEffect(() => {\r\n    if (!id) return;\r\n\r\n    // Lấy bài viết chi tiết\r\n    postService\r\n      .getById(id)\r\n      .then((res: Post) => {\r\n        setPost(res);\r\n\r\n        // Sau khi có bài viết -> lấy các bài viết khác cùng topic\r\n        if (res.topic) {\r\n          topicService\r\n            .getBySlug(slug)\r\n            .then((res: { topic: Topic; posts: Post[] }) => {\r\n              // loại bỏ bài hiện tại\r\n              const others = res.posts.filter((p) => p._id !== id);\r\n              setRelatedPosts(others);\r\n            })\r\n            .catch(console.error);\r\n        }\r\n      })\r\n      .catch(console.error);\r\n  }, [id, slug]);\r\n\r\n  if (!post) return <div className=\"p-10 text-center\">Đang tải...</div>;\r\n  if (!post._id) return notFound();\r\n\r\n  return (\r\n    <div className=\"max-w-6xl mx-auto px-4 py-10\">\r\n      <h1 className=\"text-3xl font-bold mb-2\">{post.title}</h1>\r\n      <p className=\"text-gray-500 mb-4\">Tác giả: {post.author}</p>\r\n      <p className=\"text-gray-700 leading-relaxed mb-4\">{post.excerpt}</p>\r\n\r\n      {post.type === \"video\" ? (\r\n        <iframe\r\n          src={post.videoUrl}\r\n          className=\"w-full aspect-video rounded-lg shadow\"\r\n          allowFullScreen\r\n        />\r\n      ) : (\r\n        post.image && (\r\n          <img\r\n            src={post.image}\r\n            alt={post.title}\r\n            className=\"w-full rounded-lg shadow\"\r\n          />\r\n        )\r\n      )}\r\n\r\n      <div className=\"mt-6 text-gray-800 leading-relaxed whitespace-pre-line\">\r\n        {post.content}\r\n      </div>\r\n {/* Divider */}\r\n      <div className=\"w-full border-t border-green-800 mt-6 mx-auto\"></div>\r\n      {/* 🧩 Bài viết khác */}\r\n      {relatedPosts.length > 0 && (\r\n        <DifferentPost posts={relatedPosts} currentPostId={post._id} slug={slug} />\r\n      )}\r\n\r\n      <Contact />\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

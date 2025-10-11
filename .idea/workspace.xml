@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e4481b7-c1ec-47ae-ae1a-67dceb83eb5d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/HeroSection.tsx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lh/src/app/(user)/topic/components/HeroSection.tsx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/about/doinguchungtoi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/topic/anh55ttuoi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/topic/doingu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/topic/taisantrondoi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/home/AboutUs.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/AboutUs.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/home/FeaturedNews.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/FeaturedNews.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/home/OurServices.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/OurServices.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/home/Testimonials.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/Testimonials.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/home/WhatWeDo.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/home/WhatWeDo.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/introduce/components/HeroSection.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/introduce/components/HeroSection.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/introduce/employee/components/Banner.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/introduce/employee/components/Banner.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/app/(user)/topic/[slug]/page.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/app/(user)/topic/[slug]/page.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/components/Header.tsx.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/components/Header.tsx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/i18n/locales/en/translation.json.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/i18n/locales/en/translation.json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lh/src/i18n/locales/vi/translation.json.json" beforeDir="false" afterPath="$PROJECT_DIR$/.lh/src/i18n/locales/vi/translation.json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/AboutUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/FeaturedNews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/FeaturedNews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/OurServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/OurServices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/Testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/Testimonials.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/home/WhatWeDo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/home/WhatWeDo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/introduce/components/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/introduce/components/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/introduce/employee/components/Banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/introduce/employee/components/Banner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(user)/topic/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(user)/topic/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/vi/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/vi/translation.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="33p2zxchnYLwmsRK523PzjCF58M" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e4481b7-c1ec-47ae-ae1a-67dceb83eb5d" name="Changes" comment="" />
+      <created>1759999959213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759999959213</updated>
+    </task>
+    <servers />
+  </component>
+</project>

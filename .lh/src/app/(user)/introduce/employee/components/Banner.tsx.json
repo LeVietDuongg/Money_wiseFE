@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/(user)/introduce/employee/components/Banner.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1759734122550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1759734122550,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport BannerImage from \"@/assets/about/banner.svg\";\r\nimport Image from \"next/image\";\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\nexport default function Banner() {\r\n  const { t } = useLanguage();\r\n  \r\n  return (\r\n    <section className=\"relative w-full\">\r\n      {/* Responsive image aspect ratio */}\r\n      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n        <Image\r\n          src={BannerImage}\r\n          alt=\"Banner\"\r\n          fill\r\n          priority\r\n          className=\"object-cover\"\r\n        />\r\n\r\n        {/* Overlay text */}\r\n        <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4\">\r\n          <h1 className=\"text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg\">\r\n            {t(\"introduce.employee.title\")}\r\n          </h1>\r\n          <p className=\"mt-2 text-xs sm:text-sm md:text-lg text-white drop-shadow-md\">\r\n            {t(\"introduce.employee.subtitle\")}\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

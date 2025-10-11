@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/(user)/introduce/employee/[id]/components/DifferentEmployee.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1759734122851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760082683116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,16 @@\n };\r\n \r\n export default function DifferentEmployee({ employees }: { employees: EmployeeType[] }) {\r\n   const { t } = useLanguage();\r\n-  \r\n+\r\n   return (\r\n-    <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full max-w-6xl mt-12 mx-auto mb-12\">\r\n-        <h2 className=\"col-span-full text-2xl font-bold\">{t(\"introduce.employee.otherEmployees\")}</h2>\r\n+    <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl mt-10 mx-auto mb-12\">\r\n+      {/* Tiêu đề */}\r\n+      <h2 className=\"col-span-full text-2xl font-bold text-center mb-4\">\r\n+        {t(\"introduce.employee.otherEmployees\")}\r\n+      </h2>\r\n+\r\n       {employees.slice(0, 3).map((person) => (\r\n         <Link\r\n           key={person.id}\r\n           href={`/introduce/employee/${person.id}`}\r\n@@ -25,13 +29,15 @@\n         >\r\n           <Image\r\n             src={person.img}\r\n             alt={person.name}\r\n-            className=\"w-full h-128 object-cover rounded-t-lg\"\r\n+            className=\"w-full h-72 object-cover rounded-t-lg\"\r\n           />\r\n-          <div className=\"p-6\">\r\n+          <div className=\"p-4\">\r\n+            {/* Chức vụ lên trên */}\r\n+            <p className=\"text-gray-600 font-medium mb-1\">{person.role}</p>\r\n+            {/* Tên xuống dưới */}\r\n             <h3 className=\"font-semibold text-lg\">{person.name}</h3>\r\n-            <p className=\"text-gray-600\">{person.role}</p>\r\n           </div>\r\n         </Link>\r\n       ))}\r\n     </div>\r\n"
+                }
+            ],
+            "date": 1759734122851,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport Image, { StaticImageData } from \"next/image\";\r\nimport Link from \"next/link\";\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\ntype EmployeeType = {\r\n  id: string;\r\n  name: string;\r\n  role: string;\r\n  img: StaticImageData;\r\n};\r\n\r\nexport default function DifferentEmployee({ employees }: { employees: EmployeeType[] }) {\r\n  const { t } = useLanguage();\r\n  \r\n  return (\r\n    <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full max-w-6xl mt-12 mx-auto mb-12\">\r\n        <h2 className=\"col-span-full text-2xl font-bold\">{t(\"introduce.employee.otherEmployees\")}</h2>\r\n      {employees.slice(0, 3).map((person) => (\r\n        <Link\r\n          key={person.id}\r\n          href={`/introduce/employee/${person.id}`}\r\n          className=\"bg-white shadow-md rounded-lg flex flex-col text-center hover:shadow-lg transition overflow-hidden\"\r\n        >\r\n          <Image\r\n            src={person.img}\r\n            alt={person.name}\r\n            className=\"w-full h-128 object-cover rounded-t-lg\"\r\n          />\r\n          <div className=\"p-6\">\r\n            <h3 className=\"font-semibold text-lg\">{person.name}</h3>\r\n            <p className=\"text-gray-600\">{person.role}</p>\r\n          </div>\r\n        </Link>\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

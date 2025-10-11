@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/app/(user)/contact/components/Banner.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1760002159661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760003823314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image from \"next/image\";\r\n-import Banner1 from \"@/assets/contact/tphcm.jpg\";\r\n+import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n     <div className=\"relative w-full h-[300px]\">\r\n"
+                },
+                {
+                    "date": 1760003834536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-[300px]\">\r\n+    <div className=\"relative w-full h-\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n"
+                },
+                {
+                    "date": 1760003842284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-\">\r\n+    <div className=\"relative w-full h-32 sm:h-40 lg:h-48 rounded-b-3xl overflow-hidden shadow-inner\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n"
+                },
+                {
+                    "date": 1760003863980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-32 sm:h-40 lg:h-48 rounded-b-3xl overflow-hidden shadow-inner\">\r\n+    <div className=\"relative w-full h-[1200x300px]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n"
+                },
+                {
+                    "date": 1760003974454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,16 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-[1200x300px]\">\r\n+    <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n         fill\r\n         priority\r\n         className=\"w-full h-full object-cover\"\r\n       />\r\n-\r\n-      \r\n     </div>\r\n   );\r\n-}\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760069342327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n+    <div className=\"relative w-screen left-1/2 right-1/2 -mx-[50vw] max-h-[300px]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n         fill\r\n         priority\r\n-        className=\"w-full h-full object-cover\"\r\n+        className=\"object-contain\"\r\n       />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760069362600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-screen left-1/2 right-1/2 -mx-[50vw] max-h-[300px]\">\r\n+    <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n"
+                },
+                {
+                    "date": 1760069422551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n+    <div className=\"relative w-screen h-[300px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n         fill\r\n         priority\r\n-        className=\"object-contain\"\r\n+        className=\"object-cover\"\r\n       />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760069446441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-screen h-[300px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n+    <div className=\"relative w-screen h-[400px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n"
+                },
+                {
+                    "date": 1760084611285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-screen h-[400px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n+    <div className=\"relative w-full max-w-6xl mx-auto aspect-[1200/400]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n         fill\r\n         priority\r\n-        className=\"object-cover\"\r\n+        className=\"object-cover rounded-lg\"\r\n       />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760084651633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n import Banner1 from \"@/assets/contact/tphcm.png\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full max-w-6xl mx-auto aspect-[1200/400]\">\r\n+    <div className=\"relative w-screen h-[400px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n       {/* Background Image */}\r\n       <Image\r\n         alt=\"Banner Bottom\"\r\n         src={Banner1}\r\n         fill\r\n         priority\r\n-        className=\"object-cover rounded-lg\"\r\n+        className=\"object-cover\"\r\n       />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760089451659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image from \"next/image\";\r\n-import Banner1 from \"@/assets/contact/tphcm.png\";\r\n+import Banner1 from \"@/assets/contact/anh-thanh-pho-1.jpg\";\r\n \r\n export default function Banner() {\r\n   return (\r\n     <div className=\"relative w-screen h-[400px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]\">\r\n"
+                }
+            ],
+            "date": 1760002159661,
+            "name": "Commit-0",
+            "content": "import Image from \"next/image\";\r\nimport Banner1 from \"@/assets/contact/tphcm.jpg\";\r\n\r\nexport default function Banner() {\r\n  return (\r\n    <div className=\"relative w-full h-[300px]\">\r\n      {/* Background Image */}\r\n      <Image\r\n        alt=\"Banner Bottom\"\r\n        src={Banner1}\r\n        fill\r\n        priority\r\n        className=\"w-full h-full object-cover\"\r\n      />\r\n\r\n      \r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

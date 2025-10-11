@@ -1,0 +1,101 @@
+{
+    "sourceFile": "src/app/(user)/introduce/components/HeroSection.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+<<<<<<< Updated upstream
+            "activePatchIndex": 5,
+=======
+            "activePatchIndex": 19,
+>>>>>>> Stashed changes
+            "patches": [
+                {
+                    "date": 1759742129279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1759742167297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,14 +20,8 @@\n         />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n         <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n-          <h1 className=\"text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg\">\r\n-            {t(\"introduce.hero.title\")}\r\n-          </h1>\r\n-          <p className=\"mt-2 text-xs sm:text-sm md:text-lg text-white drop-shadow-md max-w-2xl\">\r\n-            {t(\"introduce.hero.subtitle\")}\r\n-          </p>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1759820516301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,17 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n-        <Image\r\n-          src={BannerImage}\r\n-          alt=\"About Us Banner\"\r\n-          fill\r\n-          priority\r\n-          className=\"object-cover\" // fill image without distortion\r\n-        />\r\n+    <div className=\"relative w-full h-[180px] md:h-[280px] lg:h-[340px]\">\r\n+  <Image\r\n+    src={BannerImage}\r\n+    alt=\"About Us Banner\"\r\n+    fill\r\n+    priority\r\n+    className=\"object-cover\"\r\n+    sizes=\"100vw\"\r\n+  />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n         <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1759820526491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,17 +9,16 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-    <div className=\"relative w-full h-[180px] md:h-[280px] lg:h-[340px]\">\r\n-  <Image\r\n-    src={BannerImage}\r\n-    alt=\"About Us Banner\"\r\n-    fill\r\n-    priority\r\n-    className=\"object-cover\"\r\n-    sizes=\"100vw\"\r\n-  />\r\n+      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n+        <Image\r\n+          src={BannerImage}\r\n+          alt=\"About Us Banner\"\r\n+          fill\r\n+          priority\r\n+          className=\"object-cover\" // fill image without distortion\r\n+        />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n         <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1759820534185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           className=\"object-cover\" // fill image without distortion\r\n         />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n-        <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n+  <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1759820539781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           className=\"object-cover\" // fill image without distortion\r\n         />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n-  <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n+        <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+<<<<<<< Updated upstream
+=======
+                },
+                {
+                    "date": 1759998650444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n \"use client\";\r\n-\r\n-import BannerImage from \"@/assets/about/banner aboutus.png\";\r\n import Image from \"next/image\";\r\n+import BannerImage from \"@/assets/about/doinguchungtoi.png\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n export default function HeroSection() {\r\n   const { t } = useLanguage();\r\n"
+                },
+                {
+                    "date": 1759998894147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n+      <div className=\"relative w-full aspect-[1200/380] max-h-[600px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759998910221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/380] max-h-[600px]\">\r\n+      <div className=\"relative w-full aspect-[1200/580] max-h-[600px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759998925374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/580] max-h-[600px]\">\r\n+      <div className=\"relative w-full aspect-[1200/680] max-h-[600px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999004593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/680] max-h-[600px]\">\r\n+      <div className=\"relative w-full aspect-[1200/650] max-h-[600px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999018932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/650] max-h-[600px]\">\r\n+      <div className=\"relative w-full aspect-[1200/650] max-h-[500px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999026925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/650] max-h-[500px]\">\r\n+      <div className=\"relative w-full aspect-[1200/250] max-h-[500px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999050304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/250] max-h-[500px]\">\r\n+      <div className=\"relative w-full aspect-[1200/250] max-h-[300px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999055823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/250] max-h-[300px]\">\r\n+      <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999097029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/300] max-h-[300px]\">\r\n+      <div className=\"relative w-full aspect-[1200/300] max-h-[350px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999106375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/300] max-h-[350px]\">\r\n+      <div className=\"relative w-full aspect-[1200/300] max-h-[400px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999120397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/300] max-h-[400px]\">\r\n+      <div className=\"relative w-full aspect-[1200/300] max-h-[450px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1759999127443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Container to maintain aspect ratio, responsive on all screens */}\r\n-      <div className=\"relative w-full aspect-[1200/300] max-h-[450px]\">\r\n+      <div className=\"relative w-full aspect-[1200/350] max-h-[450px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n"
+                },
+                {
+                    "date": 1760000601787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,18 @@\n         <Image\r\n           src={BannerImage}\r\n           alt=\"About Us Banner\"\r\n           fill\r\n+\r\n           priority\r\n           className=\"object-cover\" // fill image without distortion\r\n         />\r\n \r\n         {/* Text Overlay with better contrast */}\r\n         <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n+          <h1 className=\"text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl\">\r\n+            MONEYWISE VIETNAM\r\n+          </h1>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+>>>>>>> Stashed changes
+                }
+            ],
+            "date": 1759742129279,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport BannerImage from \"@/assets/about/banner aboutus.png\";\r\nimport Image from \"next/image\";\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\nexport default function HeroSection() {\r\n  const { t } = useLanguage();\r\n  \r\n  return (\r\n    <section className=\"relative w-full\">\r\n      {/* Container to maintain aspect ratio, responsive on all screens */}\r\n      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n        <Image\r\n          src={BannerImage}\r\n          alt=\"About Us Banner\"\r\n          fill\r\n          priority\r\n          className=\"object-cover\" // fill image without distortion\r\n        />\r\n\r\n        {/* Text Overlay with better contrast */}\r\n        <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/20\">\r\n          <h1 className=\"text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg\">\r\n            {t(\"introduce.hero.title\")}\r\n          </h1>\r\n          <p className=\"mt-2 text-xs sm:text-sm md:text-lg text-white drop-shadow-md max-w-2xl\">\r\n            {t(\"introduce.hero.subtitle\")}\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/(user)/topic/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1759724202927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1759724202927,
+            "name": "Commit-0",
+            "content": "import Link from \"next/link\";\r\n\r\nconst topics = [\r\n  { slug: \"lifetime-money\", title: \"lifetime money\" },\r\n  { slug: \"retire-55\", title: \"retire 55\" },\r\n  { slug: \"where-money\", title: \"where money\" },\r\n];\r\n\r\nexport default function TopicListPage() {\r\n  return (\r\n    <div className=\"max-w-4xl mx-auto px-4 py-10\">\r\n      <h1 className=\"text-3xl font-bold mb-6 text-center sm:text-left\">\r\n        Danh sách chủ đề\r\n      </h1>\r\n\r\n      {/* Desktop/Laptop: danh sách dọc */}\r\n      <ul className=\"hidden sm:block space-y-4\">\r\n        {topics.map((topic) => (\r\n          <li key={topic.slug}>\r\n            <Link\r\n              href={`/topic/${topic.slug}`}\r\n              className=\"text-blue-600 hover:underline text-lg\"\r\n            >\r\n              {topic.title}\r\n            </Link>\r\n          </li>\r\n        ))}\r\n      </ul>\r\n\r\n      {/* Mobile/Tablet: grid card */}\r\n      <div className=\"grid grid-cols-1 gap-4 sm:hidden\">\r\n        {topics.map((topic) => (\r\n          <Link\r\n            key={topic.slug}\r\n            href={`/topic/${topic.slug}`}\r\n            className=\"border rounded-lg p-4 shadow hover:shadow-md transition bg-white text-center text-blue-700 font-semibold\"\r\n          >\r\n            {topic.title}\r\n          </Link>\r\n        ))}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

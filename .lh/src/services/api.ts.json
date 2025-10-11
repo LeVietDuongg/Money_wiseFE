@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/services/api.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1760079745255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760086091191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,25 @@\n   baseURL: process.env.NEXT_PUBLIC_API_URL?.replace(/\\/$/, \"\") || \"http://localhost:5000/api\",\r\n   withCredentials: true,\r\n });\r\n \r\n+// ✅ Disable cache để debug\r\n+api.defaults.headers.common['Cache-Control'] = 'no-cache';\r\n+api.defaults.headers.common['Pragma'] = 'no-cache';\r\n+\r\n // ✅ Thêm token vào header nếu có\r\n api.interceptors.request.use((config) => {\r\n   const token = adminAuthService.getAccessToken?.();\r\n   if (token) config.headers.Authorization = `Bearer ${token}`;\r\n   return config;\r\n });\r\n \r\n+// ✅ Debug response để kiểm tra dữ liệu\r\n+api.interceptors.response.use((response) => {\r\n+  console.log(`🔍 API Response [${response.config.method?.toUpperCase()} ${response.config.url}]:`, response.data);\r\n+  return response;\r\n+}, (error) => {\r\n+  console.error(`❌ API Error [${error.config?.method?.toUpperCase()} ${error.config?.url}]:`, error.response?.data);\r\n+  return Promise.reject(error);\r\n+});\r\n+\r\n export default api;\r\n"
+                },
+                {
+                    "date": 1760088159204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,8 @@\n   baseURL: process.env.NEXT_PUBLIC_API_URL?.replace(/\\/$/, \"\") || \"http://localhost:5000/api\",\r\n   withCredentials: true,\r\n });\r\n \r\n-// ✅ Disable cache để debug\r\n-api.defaults.headers.common['Cache-Control'] = 'no-cache';\r\n-api.defaults.headers.common['Pragma'] = 'no-cache';\r\n-\r\n // ✅ Thêm token vào header nếu có\r\n api.interceptors.request.use((config) => {\r\n   const token = adminAuthService.getAccessToken?.();\r\n   if (token) config.headers.Authorization = `Bearer ${token}`;\r\n"
+                }
+            ],
+            "date": 1760079745255,
+            "name": "Commit-0",
+            "content": "// services/api.ts\r\nimport axios from \"axios\";\r\nimport { adminAuthService } from \"./adminAuth.service\";\r\n\r\n// Tự động chọn API URL theo môi trường\r\nconst api = axios.create({\r\n  baseURL: process.env.NEXT_PUBLIC_API_URL?.replace(/\\/$/, \"\") || \"http://localhost:5000/api\",\r\n  withCredentials: true,\r\n});\r\n\r\n// ✅ Thêm token vào header nếu có\r\napi.interceptors.request.use((config) => {\r\n  const token = adminAuthService.getAccessToken?.();\r\n  if (token) config.headers.Authorization = `Bearer ${token}`;\r\n  return config;\r\n});\r\n\r\nexport default api;\r\n"
+        }
+    ]
+}

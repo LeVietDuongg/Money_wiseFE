@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/services/service.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1760079787289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1760079787289,
+            "name": "Commit-0",
+            "content": "import api from \"./api\";\r\nimport { Service } from \"@/types/service\";\r\n\r\nexport const serviceService = {\r\n  /** 🟩 Lấy tất cả dịch vụ */\r\n  getAll: async (): Promise<Service[]> => {\r\n    const res = await api.get(\"/services\");\r\n    return Array.isArray(res.data?.services) ? res.data.services : [];\r\n  },\r\n\r\n  /** 🟦 Lấy chi tiết theo ID */\r\n  getById: async (id: string): Promise<Service> => {\r\n    const res = await api.get(`/services/${id}`);\r\n    return res.data?.service || res.data;\r\n  },\r\n\r\n  /** 🟨 Tạo mới (kèm icon + image nếu có) */\r\n  create: async (\r\n    data: Partial<Service>,\r\n    files?: { icon?: File; image?: File }\r\n  ): Promise<Service> => {\r\n    const formData = new FormData();\r\n\r\n    // 🧩 Thêm 2 file icon & image\r\n    if (files?.icon instanceof File) formData.append(\"icon\", files.icon);\r\n    if (files?.image instanceof File) formData.append(\"image\", files.image);\r\n\r\n    // 🧩 Thêm các trường text\r\n    if (data.title) formData.append(\"title\", data.title.trim());\r\n    if (data.description) formData.append(\"description\", data.description.trim());\r\n    if (data.content) formData.append(\"content\", data.content.trim());\r\n\r\n    const res = await api.post(\"/services\", formData, {\r\n      headers: { \"Content-Type\": \"multipart/form-data\" },\r\n    });\r\n    return res.data?.service || res.data;\r\n  },\r\n\r\n  /** 🟧 Cập nhật (kèm icon + image nếu có) */\r\n  update: async (\r\n    id: string,\r\n    data: Partial<Service>,\r\n    files?: { icon?: File; image?: File }\r\n  ): Promise<Service> => {\r\n    const formData = new FormData();\r\n\r\n    if (files?.icon instanceof File) formData.append(\"icon\", files.icon);\r\n    if (files?.image instanceof File) formData.append(\"image\", files.image);\r\n\r\n    if (data.title) formData.append(\"title\", data.title.trim());\r\n    if (data.description) formData.append(\"description\", data.description.trim());\r\n    if (data.content) formData.append(\"content\", data.content.trim());\r\n\r\n    const res = await api.put(`/services/${id}`, formData, {\r\n      headers: { \"Content-Type\": \"multipart/form-data\" },\r\n    });\r\n    return res.data?.service || res.data;\r\n  },\r\n\r\n  /** 🟥 Xóa */\r\n  delete: async (id: string): Promise<{ message: string }> => {\r\n    const res = await api.delete(`/services/${id}`);\r\n    return res.data;\r\n  },\r\n};\r\n"
+        }
+    ]
+}

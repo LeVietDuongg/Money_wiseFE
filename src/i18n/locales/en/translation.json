@@ -1,0 +1,395 @@
+{
+  "header": {
+    "home": "HOME",
+    "introduce": "INTRODUCE",
+    "topic": "TOPIC",
+    "service": "SERVICE",
+    "community": "COMMUNITY",
+    "contact": "CONTACT",
+    "company": "MONEYWISE VN",
+    "employee": "Employee",
+    "whereMoney": "Where money",
+    "retire55": "Retire 55",
+    "lifetimeMoney": "Lifetime money",
+    "facebook": "Facebook",
+    "youtube": "Youtube",
+    "language": {
+      "vietnamese": "Vietnamese",
+      "english": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title1": "WE HELP PEOPLE SAVE AND",
+      "title2": "BUSINESSES GROW",
+      "title3": "FINANCIAL CONFIDENCE.",
+      "subtitle": "Personalized Financial Planning, Backed By Certified Advisors.",
+
+      "bookSession": "Book Session"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "monthlyMembers": "Monthly Members",
+      "reviews": "8000+ reviews",
+      "description1": "Welcome to",
+      "description2": "We exist to empower Vietnamese people to take control of their financial lives—by building smart habits, gaining confidence, and adopting a modern money mindset. We believe financial literacy is the foundation for confidence, stability, and long-term wellbeing. That's why we focus on:",
+      "point1": "📈 Boosting financial literacy through practical, personalized coaching",
+      "point2": "🧭 Building trust-driven systems for confident money decisions",
+      "point3": "💡 Localizing global strategies for Vietnam's personal finance needs",
+      "point4": "🌱 Empowering individuals and families toward lasting financial wellness",
+      "explore": "EXPLORE"
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "subtitle": "We help individual and enterprise clients answer three critical questions that shape their financial future.",
+      "service1": {
+        "title": "Optimize Capital Flow",
+        "desc": "Analyze and restructure budgets, optimize spending, and maximize financial efficiency for growth."
+      },
+      "service2": {
+        "title": " Future Wealth Security",
+        "desc": "Develop a strategic, personalized plan for long-term wealth accumulation and early financial independence."
+      },
+      "service3": {
+        "title": "Sustainable Income Streams",
+        "desc": "Engineer diversified and resilient income sources for enduring financial stability and security."
+      }
+    },
+    "featuredNews": {
+      "title": "Featured News",
+      "subtitle": "Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "news1": {
+        "title": "Can I Really Retire at 55 in Vietnam?",
+        "category": "Financial",
+        "desc": "Retiring at 55 in Vietnam is an achievable goal, but it depends on reaching a specific financial number, not just an age. It requires disciplined planning to accumulate a nest egg worth about 25 times your annual living expenses."
+      },
+      "news2": {
+        "title": "3 Common Money Mistakes",
+        "category": "Business",
+        "desc": "Avoid these common pitfalls to secure your financial future."
+      },
+      "news3": {
+        "title": "Why Financial Literacy is Key for Your Employees?",
+        "category": "Investment",
+        "desc": "An employee's financial stress directly impacts their focus and productivity at work. This article argues that providing financial education is a strategic investment for companies."
+      },
+      "news4": {
+        "title": "A Beginner's Guide to Building Wealth",
+        "category": "Market",
+        "desc": "Building wealth is a journey that requires knowledge, discipline, and a solid plan. This guide covers the essential steps to start your wealth-building journey."
+      },
+      "news5": {
+        "title": "Lifetime Money: Planning for Financial Security",
+        "category": "Finance",
+        "desc": "Lifetime Money is about creating a sustainable financial plan that ensures security and peace of mind throughout your life. This article explores strategies for achieving this goal."
+      },
+      "news6": {
+        "title": "5 Tips to Retire Comfortably at 55",
+        "category": "Retirement",
+        "desc": "Retiring comfortably at 55 requires careful planning and smart financial decisions."
+  },
+      "readMore": "Read More »",
+      "viewAll": "View All"
+    },
+    "testimonials": {
+      "title": "What Sets Us Apart",
+      "subtitle": "Feedback from clients who have used our services",
+      "testimonial1": {
+        "content": "MoneyWise helped my family rethink how we manage money every day. Their goal-setting tips made saving for the future feel achievable.",
+        "name": "John Smith",
+        "title": "CEO of ABC Company"
+      },
+      "testimonial2": {
+        "content": "Partnering with MoneyWise Vietnam transformed how our employees think about money. The workshops were engaging and practical.",
+        "name": "Jane Doe",
+        "title": "Director of XYZ Company"
+      },
+      "testimonial3": {
+        "content": "I've recommended it to many friends and colleagues—once you see the impact, you want others to benefit too.",
+        "name": "Robert Johnson",
+        "title": "CTO of DEF Company"
+      }
+    },
+    "bannerBottom": {
+      "title": "Let's Work Together",
+      "subtitle": "Start your financial independence journey today",
+      "placeholder": "Enter your email",
+      "button": "Get Started"
+    },
+    "banner": {
+      "consults": "Consults",
+      "goalsMet": "Goals Met",
+      "coaches": "Expert Coaches",
+      "coachingHours": "Coaching Hours"
+    },
+    "ourServices": {
+      "title": "Our Services",
+      "services": [
+        {
+          "title": "Personal Finance Coaching",
+          "desc": "Guiding clients to financial goals through education and accountability."
+        },
+        {
+          "title": "Wealth Strategy",
+          "desc": "Comprehensive plan for growing, protecting, and transferring financial assets effectively."
+        },
+        {
+          "title": "Risk Management",
+          "desc": "Identifying, assessing, and mitigating threats to protect assets and income."
+        },
+        {
+          "title": "Retirement Planning",
+          "desc": "Securing your future: calculating needs, maximizing savings, and managing withdrawals."
+        },
+        {
+          "title": "Smart Analytics",
+          "desc": "Data-driven insights for informed financial decisions."
+        },
+        {
+          "title": "SME Consulting",
+          "desc": "Expert guidance for small and medium-sized enterprises to achieve growth."
+        }
+      ]
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "subtitle": "Leave your information, and we will get back to you as soon as possible",
+      "contactInfo": "Contact Information",
+      "address": "3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM",
+      "email": "contact@moneywise.vn",
+      "formTitle": "Send us a message",
+      "form": {
+        "fullName": "Full Name *",
+        "email": "Email *",
+        "subject": "Subject",
+             "phone": "Phone Number",
+        "message": "Message *",
+        "submit": "Send Message "
+      },
+      "note": {
+        "title": "Important Note:",
+        "message": "This website's content is for general information only, not personalized financial advice. You are solely responsible for your own decisions and all associated risks. Using this site means you agree to our full terms."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "contactInfo": "Contact Information",
+    "address": "3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM",
+
+    "email": "contact@moneywise.vn",
+    "sendMessage": "Send us a message",
+    "form": {
+      "fullName": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message *",
+      "submit": "Send Message",
+      "name": "Full name",
+      "content": "Content",
+      "newsletter": "I want to receive the newsletter",
+      "send": "Send"
+    },
+    "importantNote": "Important Note:",
+    "noteText": "Please only send requests related to work, spam content will be deleted without notice.",
+    "leaveInfo": "Leave your consultation information",
+    "addressAlt": "3 Nguyen Co Thach, An Khanh, HCM City"
+  },
+  "introduce": {
+    "description": "This is an overview page about our company and our team.",
+    "aboutCompany": "About the Company",
+    "aboutTeam": "About the Team",
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Discover our mission and values"
+    },
+    "employee": {
+      "title": "Our Team",
+      "subtitle": "Discover our mission and values",
+      "otherEmployees": "Other Employees",
+      "members": {
+        "larry-truong": {
+          "name": "Larry Truong",
+          "role": "CEO",
+          "bio": "Larry Truong – Money Coach & Managing Director | Money Coach\nLarry Truong is a seasoned professional in personal finance, with over 30 years of experience across both global and local markets—including two decades deeply engaged in Vietnam's evolving financial services landscape. He leads MoneyWise Vietnam with a focus on delivering practical, high-impact personal finance solutions tailored to the needs of Vietnamese individuals and enterprises. The professional development programs he and his team have implemented have empowered over 50,000 financial advisors, sales managers, and 1,000 employees through transformative learning systems—setting new benchmarks for professionalism across the industry."
+        },
+        "tran-thi-b": {
+          "name": "Tran Thi B",
+          "role": "Financial Coach",
+          "bio": "Financial Coach introduction content here..."
+        },
+        "le-van-c": {
+          "name": "Le Van C",
+          "role": "Community Leader",
+          "bio": "Community Leader introduction content here..."
+        },
+        "pham-thi-d": {
+          "name": "Pham Thi D",
+          "role": "Developer",
+          "bio": "Developer introduction content here..."
+        },
+        "hoang-van-e": {
+          "name": "Hoang Van E",
+          "role": "Marketing",
+          "bio": "Marketing introduction content here..."
+        }
+      }
+    },
+    "content": {
+      "title": "MONEYWISE FINANCIAL CONSULTING COMPANY",
+      "intro1": "MoneyWise Financial Consulting Company was established in 2018 with the dedication of a team of experts with more than",
+      "intro2": "40 years of experience",
+      "intro3": "in the fields of finance, banking, investment and corporate governance.",
+      "intro4": "MoneyWise is proud to have a team of excellent, experienced, dynamic and dedicated experts in analyzing, planning, and providing optimal financial solutions for individual and corporate clients.",
+      "location1": "With the advantage of having 2 offices in",
+      "location2": "Hanoi",
+      "location3": "and",
+      "location4": "Ho Chi Minh City",
+      "location5": ", MoneyWise brings convenience in meeting, exchanging and consulting directly.",
+      "consultingTitle": "CONSULTING AREAS AT MONEYWISE",
+      "consulting1": "Personal & corporate investment consulting:",
+      "consulting1Desc": "market analysis, investment opportunities, risk management.",
+      "consulting2": "Corporate financial management consulting:",
+      "consulting2Desc": "capital structure, cash flow, business expansion plan.",
+      "consulting3": "Loan & credit consulting:",
+      "consulting3Desc": "solutions to access capital, optimize borrowing costs.",
+      "consulting4": "Insurance & retirement consulting:",
+      "consulting4Desc": "asset protection plan, long-term safety assurance.",
+      "consulting5": "Personal asset management consulting:",
+      "consulting5Desc": "saving, investing and accumulating for the future.",
+      "consulting6": "Tax & financial legal consulting:",
+      "consulting6Desc": "regulatory compliance, legal cost optimization.",
+      "coreValuesTitle": "CORE VALUES OF MONEYWISE",
+      "coreValuesIntro": "Throughout its years of operation, MoneyWise has always taken the motto",
+      "coreValuesMotto": "\"HEART - VISION - TALENT - TRUST\"",
+      "coreValuesGuide": "as a guideline:",
+      "value1": "HEART:",
+      "value1Desc": "Responsibility, dedication, putting customer benefits first.",
+      "value2": "VISION:",
+      "value2Desc": "Aiming to become a multi-service financial consulting company.",
+      "value3": "TALENT:",
+      "value3Desc": "A team of experts with extensive knowledge & experience.",
+      "value4": "TRUST:",
+      "value4Desc": "Building prestige, becoming a reliable partner of customers."
+    }
+  },
+  "community": {
+    "title": "Welcome to the Community Page"
+  },
+  "service": {
+    "title": "Service A",
+    "company": "MoneyWise Financial Consulting Company",
+    "description1": "MoneyWise Financial Consulting Company was established in 2018 with collaboration...",
+    "description2": "With offices in Hanoi and Ho Chi Minh City, MoneyWise helps clients...",
+    "otherServices": {
+      "title": "Other Services:",
+      "viewAll": "View All"
+    },
+    
+    "services": [
+      {
+        "title": "Financial Cost Audit",
+        "description": "Financial cost analysis and consulting..."
+      },
+      {
+        "title": "Investment Strategy Consulting",
+        "description": "Optimal investment strategy solutions..."
+      },
+      {
+        "title": "Personal Financial Management",
+        "description": "Help you control spending and save..."
+      }
+    ]
+  },
+  "topic": {
+    "search": "Search articles...",
+    "viewMore": "View more →",
+    "notFound": "❌ Topic does not exist!",
+    "post": "Post",
+    "otherPosts": "Other Posts",
+    "lifetimeMoney": {
+      "title": "Lifetime Money",
+      "subtitle": "Sustainable, safe financial solutions for life",
+      "posts": {
+        "1": {
+          "title": "Long-term financial strategy",
+          "excerpt": "How to allocate capital and invest to ensure lifetime security..."
+        },
+        "2": {
+          "title": "Video sharing from experts",
+          "excerpt": "Watch video analysis of retirement plans..."
+        },
+        "3": {
+          "title": "Smart investment",
+          "excerpt": "Golden principles..."
+        },
+        "4": {
+          "title": "Risk management",
+          "excerpt": "How to protect assets..."
+        },
+        "5": {
+          "title": "Tax planning",
+          "excerpt": "Optimize taxes for individuals..."
+        },
+        "6": {
+          "title": "Effective savings",
+          "excerpt": "Small tips to increase savings..."
+        },
+        "7": {
+          "title": "Family finance",
+          "excerpt": "How to manage joint finances..."
+        },
+        "8": {
+          "title": "Stock market",
+          "excerpt": "Trends and investment opportunities..."
+        },
+        "9": {
+          "title": "Real estate",
+          "excerpt": "How to invest in property..."
+        },
+        "10": {
+          "title": "Pension fund",
+          "excerpt": "Choose the right fund for you..."
+        }
+      }
+    },
+    "retire55": {
+      "title": "Retire at 55",
+      "subtitle": "Prepare a solid financial plan for a comfortable retirement",
+      "posts": {
+        "1": {
+          "title": "How to retire early?",
+          "excerpt": "Necessary steps to be able to retire before age 55..."
+        }
+      }
+    },
+    "whereMoney": {
+      "title": "Where's the Money?",
+      "subtitle": "Discover smart money management for the future",
+      "posts": {
+        "1": {
+          "title": "Effective expense tracking",
+          "excerpt": "Apps and tips to help manage daily expenses..."
+        }
+      }
+    },
+    "readMore": "Read More",
+    "viewAll": "View All Posts"
+  },
+  "footer": {
+    "companyDescription": "We’re here to help you grow with confidence.",
+    "services": "Services",
+    "service1": "Personal Finance Coaching",
+    "service2": "Wealth Strategy",
+    "service3": "Financial Literacy",
+    "service4": "Retirement Planning",
+    "service5": "SME Consulting",
+    "contact": "Contact",
+    "address": "3 Nguyen Co Thach, An Khanh District 2, HCM City",
+    "email": "contact@moneywise.vn",
+    "copyright": "© 2025 MoneyWise. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  }
+}
