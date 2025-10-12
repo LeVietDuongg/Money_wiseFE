@@ -33,7 +33,7 @@ export default function TopicListPage() {
           <Link
             key={topic.slug}
             href={`/topic/${topic.slug}`}
-            className="border rounded-lg p-4 shadow hover:shadow-md transition bg-white text-center text-blue-700 font-semibold"
+            className="border-2 rounded-xl p-6 min-h-[80px] shadow hover:shadow-lg active:scale-95 transition-all bg-white text-center text-blue-700 font-semibold text-lg flex items-center justify-center touch-manipulation"
           >
             {topic.title}
           </Link>
