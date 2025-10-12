@@ -71,7 +71,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
-       
+      {
+        protocol: "https",
+        hostname: "cdn.tgdd.vn",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
