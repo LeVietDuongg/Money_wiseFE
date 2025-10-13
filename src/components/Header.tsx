@@ -124,9 +124,9 @@ type MenuItem = {
       ${isScrolled ? "fixed top-0 bg-white shadow-md py-2" : "relative bg-transparent"}`}
     >
       {!isScrolled && (
-        <div className="flex flex-col items-center transition-all duration-500 ease-in-out">
+        <Link href="/" className="flex flex-col items-center transition-all duration-500 ease-in-out">
           <Image src={Logo} alt="Logo" width={360} height={360} />
-        </div>
+        </Link>
       )}
       {!isScrolled && (
         <div className="w-[85%] border-t border-green-800 transition-all duration-500 ease-in-out"></div>
@@ -140,25 +140,33 @@ type MenuItem = {
         }`}
       >
         {isScrolled && (
-          <div className="hidden md:flex items-center transition-all duration-500 ease-in-out">
+          <Link href="/" className="hidden md:flex items-center transition-all duration-500 ease-in-out">
             <Image src={LogoSmall} alt="Logo Small" width={200} height={200} />
-          </div>
+          </Link>
         )}
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-10 items-center">
           {menuItems.map((item) => {
-            const isActive =
-              item.path
-                ? pathname === item.path
-                : item.children?.some((child) =>
-                    pathname.startsWith(child.path)
-                  );
+            const isActive = (() => {
+              if (item.path === "/") {
+                return pathname === "/" || pathname === "/home";
+              }
+              if (item.children) {
+                return item.children.some(
+                  (child) => child.path && pathname.startsWith(child.path)
+                );
+              }
+              if (item.path) {
+                return pathname.startsWith(item.path);
+              }
+              return false;
+            })();
 
             return item.children ? (
               <div key={item.name} className="relative">
                 <button
-                  className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors ${
+                   className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors relative ${
                     isActive ? "text-green-800" : "text-gray-800"
                   }`}
                   onClick={() =>
@@ -166,6 +174,9 @@ type MenuItem = {
                   }
                 >
                   {item.name} <ChevronDown size={16} />
+                   {isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
+                  )}
                 </button>
                 {openDropdown === item.name && (
                   <div className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded shadow-lg flex flex-col pt-2 pb-2 z-50 transition-all duration-300">
@@ -192,11 +203,15 @@ type MenuItem = {
               <Link
                 key={item.name}
                 href={item.path!}
-                className={`font-semibold hover:text-green-700 transition-colors ${
+                className={`font-semibold hover:text-green-700 transition-colors relative ${
                   isActive ? "text-green-800" : "text-gray-800"
                 }`}
               >
                 {item.name}
+                  {/* ✅ Active line indicator */}
+                {isActive && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
+                )}
               </Link>
             );
           })}
