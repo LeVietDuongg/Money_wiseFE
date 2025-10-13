@@ -164,14 +164,16 @@ type MenuItem = {
             })();
 
             return item.children ? (
-              <div key={item.name} className="relative">
+              <div 
+                key={item.name} 
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(item.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <button
                    className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors relative ${
                     isActive ? "text-green-800" : "text-gray-800"
                   }`}
-                  onClick={() =>
-                    setOpenDropdown(openDropdown === item.name ? null : item.name)
-                  }
                 >
                   {item.name} <ChevronDown size={16} />
                    {isActive && (
@@ -179,23 +181,25 @@ type MenuItem = {
                   )}
                 </button>
                 {openDropdown === item.name && (
-                  <div className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded shadow-lg flex flex-col pt-2 pb-2 z-50 transition-all duration-300">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.name}
-                        href={child.path}
-                        target={child.path.startsWith("http") ? "_blank" : "_self"}
-                        className={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 text-gray-700 whitespace-nowrap ${
-                          pathname === child.path
-                            ? "font-semibold text-green-800"
-                            : ""
-                        }`}
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        {child.icon && <span>{child.icon}</span>}
-                        {child.name}
-                      </Link>
-                    ))}
+                  <div className="absolute left-0 top-full pt-2 w-52 z-50">
+                    <div className="bg-white border border-gray-200 rounded shadow-lg flex flex-col py-2 transition-all duration-300">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.path}
+                          target={child.path.startsWith("http") ? "_blank" : "_self"}
+                          className={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 text-gray-700 whitespace-nowrap ${
+                            pathname === child.path
+                              ? "font-semibold text-green-800"
+                              : ""
+                          }`}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {child.icon && <span>{child.icon}</span>}
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
