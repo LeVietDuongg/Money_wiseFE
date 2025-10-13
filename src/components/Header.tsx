@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,8 +18,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const langRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLDivElement>(null);
-  const dropdownTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
 type MenuChild = {
@@ -63,7 +61,7 @@ type MenuItem = {
       children: [
         {
           name: "Facebook",
-          path: "https://www.facebook.com/LarryTruong8",
+          path: "https://facebook.com",
           icon: <FaFacebook className="text-blue-600" />,
         },
         {
@@ -91,21 +89,6 @@ type MenuItem = {
     setIsOpenLang(false);
   };
 
-  const clearDropdownTimer = useCallback(() => {
-    if (dropdownTimer.current) {
-      clearTimeout(dropdownTimer.current);
-      dropdownTimer.current = null;
-    }
-  }, []);
-
-  const startDropdownTimer = useCallback(() => {
-    if (!openDropdown) return;
-    clearDropdownTimer();
-    dropdownTimer.current = setTimeout(() => {
-      setOpenDropdown(null);
-    }, 200);
-  }, [clearDropdownTimer, openDropdown]);
-
   // click outside cho language
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -116,25 +99,6 @@ type MenuItem = {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  // đóng dropdown menu khi click ra ngoài khu vực nav
-  useEffect(() => {
-    function handleOutsideMenuClick(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        clearDropdownTimer();
-        setOpenDropdown(null);
-      }
-    }
-
-    document.addEventListener("mousedown", handleOutsideMenuClick);
-    return () => document.removeEventListener("mousedown", handleOutsideMenuClick);
-  }, [clearDropdownTimer]);
-
-  useEffect(() => {
-    return () => {
-      clearDropdownTimer();
-    };
-  }, [clearDropdownTimer]);
 
   // scroll effect tối ưu với requestAnimationFrame
   useEffect(() => {
@@ -169,7 +133,6 @@ type MenuItem = {
       )}
 
       <nav
-        ref={navRef}
         className={`transition-all duration-500 ease-in-out
         ${isScrolled
           ? "w-[90%] flex items-center justify-around py-2"
@@ -193,32 +156,19 @@ type MenuItem = {
                   );
 
             return item.children ? (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={clearDropdownTimer}
-                onMouseLeave={startDropdownTimer}
-              >
+              <div key={item.name} className="relative">
                 <button
                   className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors ${
                     isActive ? "text-green-800" : "text-gray-800"
                   }`}
                   onClick={() =>
-                    setOpenDropdown((prev) => {
-                      clearDropdownTimer();
-                      const next = prev === item.name ? null : item.name;
-                      return next;
-                    })
+                    setOpenDropdown(openDropdown === item.name ? null : item.name)
                   }
                 >
                   {item.name} <ChevronDown size={16} />
                 </button>
                 {openDropdown === item.name && (
-                  <div
-                    className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded shadow-lg flex flex-col pt-2 pb-2 z-50 transition-all duration-300"
-                    onMouseEnter={clearDropdownTimer}
-                    onMouseLeave={startDropdownTimer}
-                  >
+                  <div className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded shadow-lg flex flex-col pt-2 pb-2 z-50 transition-all duration-300">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
@@ -229,10 +179,7 @@ type MenuItem = {
                             ? "font-semibold text-green-800"
                             : ""
                         }`}
-                        onClick={() => {
-                          clearDropdownTimer();
-                          setOpenDropdown(null);
-                        }}
+                        onClick={() => setOpenDropdown(null)}
                       >
                         {child.icon && <span>{child.icon}</span>}
                         {child.name}

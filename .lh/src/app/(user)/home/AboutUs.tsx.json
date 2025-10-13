@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1759718276959,
@@ -92,6 +92,10 @@
                 {
                     "date": 1759822489479,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n                   src={Person2}\r\n                   alt=\"Man smiling while using phone\"\r\n                   width={250}\r\n                   height={350}\r\n-  className=\"object-cover w-full h-full transition-transform duration-500 group-hover:scale-105\"\r\n+          className=\"object-cover w-full h-full transition-transform duration-500 group-hover:scale-105\"\r\n                 />\r\n               </div>\r\n \r\n               {/* Reviews box */}\r\n"
+                },
+                {
+                    "date": 1760339506351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n \"use client\";\r\n \r\n import Image from \"next/image\";\r\n+import Link from \"next/link\";\r\n import { FaFacebook, FaLinkedin, FaTiktok, FaYoutube } from \"react-icons/fa\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n // Assets\r\n@@ -86,11 +87,13 @@\n               <p>{t(\"home.aboutUs.point3\")}</p>\r\n               <p>{t(\"home.aboutUs.point4\")}</p>\r\n             </div>\r\n             {/* Button */}\r\n-            <button className=\"mt-6 w-full sm:w-fit px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-base sm:text-lg font-semibold rounded-lg shadow hover:opacity-90 transition\">\r\n-              {t(\"home.aboutUs.explore\")}\r\n-            </button>\r\n+            <Link href=\"/introduce/company\">\r\n+              <button className=\"mt-6 w-full sm:w-fit px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-base sm:text-lg font-semibold rounded-lg shadow hover:opacity-90 transition\">\r\n+                {t(\"home.aboutUs.explore\")}\r\n+              </button>\r\n+            </Link>\r\n \r\n             {/* Social icons */}\r\n             <div className=\"flex gap-4 sm:gap-5 mt-6 justify-center sm:justify-start\">\r\n               <FaFacebook\r\n"
                 }
             ],
             "date": 1759718276959,

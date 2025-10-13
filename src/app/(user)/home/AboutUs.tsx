@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -87,9 +88,11 @@ export default function AboutUs() {
               <p>{t("home.aboutUs.point4")}</p>
             </div>
             {/* Button */}
-            <button className="mt-6 w-full sm:w-fit px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-base sm:text-lg font-semibold rounded-lg shadow hover:opacity-90 transition">
-              {t("home.aboutUs.explore")}
-            </button>
+            <Link href="/introduce/company">
+              <button className="mt-6 w-full sm:w-fit px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-base sm:text-lg font-semibold rounded-lg shadow hover:opacity-90 transition">
+                {t("home.aboutUs.explore")}
+              </button>
+            </Link>
 
             {/* Social icons */}
             <div className="flex gap-4 sm:gap-5 mt-6 justify-center sm:justify-start">

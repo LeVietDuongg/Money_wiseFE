@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1760062110544,
@@ -48,6 +48,10 @@
                 {
                     "date": 1760085455766,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,14 +70,9 @@\n         hostname: \"www.tailieusieucap.com\",\r\n         port: \"\",\r\n         pathname: \"/**\",\r\n       },\r\n-         {\r\n-        protocol: \"https\",\r\n-        hostname: \"cdn.tgdd.vn\",\r\n-        port: \"\",\r\n-        pathname: \"/**\",\r\n-      },\r\n+       \r\n     ],\r\n   },\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1760339506428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,14 @@\n         hostname: \"www.tailieusieucap.com\",\r\n         port: \"\",\r\n         pathname: \"/**\",\r\n       },\r\n-       \r\n+      {\r\n+        protocol: \"https\",\r\n+        hostname: \"cdn.tgdd.vn\",\r\n+        port: \"\",\r\n+        pathname: \"/**\",\r\n+      },\r\n     ],\r\n   },\r\n };\r\n \r\n"
                 }
             ],
             "date": 1760062110544,
