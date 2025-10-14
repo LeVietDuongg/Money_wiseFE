@@ -4,9 +4,10 @@ type HeroProps = {
   image: StaticImageData | string;
   title: string;
   subtitle: string;
+  topicKey?: string; // Add optional topicKey prop
 };
 
-export default function HeroSection({ image, title, subtitle }: HeroProps) {
+export default function HeroSection({ image, title, subtitle, topicKey }: HeroProps) {
   return (
     <section className="relative w-full">
       <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]">
@@ -15,7 +16,7 @@ export default function HeroSection({ image, title, subtitle }: HeroProps) {
           alt={title}
           fill
           priority
-          className="object-cover object-center"
+          className={`object-cover ${topicKey === "huutri55" ? "object-bottom" : "object-center"}`}
         />
 
         {/* Overlay chữ */}

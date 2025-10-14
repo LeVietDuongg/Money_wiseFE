@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1760079178934,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760430352271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,15 +8,15 @@\n \r\n export default function HeroSection({ image, title, subtitle }: HeroProps) {\r\n   return (\r\n     <section className=\"relative w-full\">\r\n-      <div className=\"relative w-full aspect-[16/9] sm:aspect-[1200/380] max-h-[380px]\">\r\n+      <div className=\"relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]\">\r\n         <Image\r\n           src={image}\r\n           alt={title}\r\n           fill\r\n           priority\r\n-          className=\"object-cover\"\r\n+          className=\"object-cover object-bottom\"\r\n         />\r\n \r\n         {/* Overlay chữ */}\r\n         <div className=\"absolute inset-0 flex flex-col items-start justify-center text-left px-4 sm:px-8 md:px-12\">\r\n"
+                },
+                {
+                    "date": 1760430357421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           src={image}\r\n           alt={title}\r\n           fill\r\n           priority\r\n-          className=\"object-cover object-bottom\"\r\n+          className=\"object-cover object-top\"\r\n         />\r\n \r\n         {/* Overlay chữ */}\r\n         <div className=\"absolute inset-0 flex flex-col items-start justify-center text-left px-4 sm:px-8 md:px-12\">\r\n"
+                },
+                {
+                    "date": 1760430427687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           src={image}\r\n           alt={title}\r\n           fill\r\n           priority\r\n-          className=\"object-cover object-top\"\r\n+          className=\"object-cover object-center\"\r\n         />\r\n \r\n         {/* Overlay chữ */}\r\n         <div className=\"absolute inset-0 flex flex-col items-start justify-center text-left px-4 sm:px-8 md:px-12\">\r\n"
+                },
+                {
+                    "date": 1760430992258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,21 @@\n type HeroProps = {\r\n   image: StaticImageData | string;\r\n   title: string;\r\n   subtitle: string;\r\n+  topicKey?: string; // Add optional topicKey prop\r\n };\r\n \r\n-export default function HeroSection({ image, title, subtitle }: HeroProps) {\r\n+export default function HeroSection({ image, title, subtitle, topicKey }: HeroProps) {\r\n   return (\r\n     <section className=\"relative w-full\">\r\n       <div className=\"relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]\">\r\n         <Image\r\n           src={image}\r\n           alt={title}\r\n           fill\r\n           priority\r\n-          className=\"object-cover object-center\"\r\n+          className={`object-cover ${topicKey === \"huutri55\" ? \"object-bottom\" : \"object-center\"}`}\r\n         />\r\n \r\n         {/* Overlay chữ */}\r\n         <div className=\"absolute inset-0 flex flex-col items-start justify-center text-left px-4 sm:px-8 md:px-12\">\r\n"
                 }
             ],
             "date": 1760079178934,
