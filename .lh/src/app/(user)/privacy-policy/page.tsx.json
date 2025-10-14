@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/(user)/privacy-policy/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1760428550061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1760428550061,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\nexport default function PrivacyPolicyPage() {\r\n  const { t } = useLanguage();\r\n\r\n  return (\r\n    <section className=\"w-full h-full bg-gray-50 py-12 px-6\">\r\n      <div className=\"container mx-auto max-w-4xl bg-white shadow-md rounded-lg p-8\">\r\n        <h1 className=\"text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-green-700 pb-4\">\r\n          {t(\"privacy.title\")}\r\n        </h1>\r\n        <article className=\"space-y-6 text-gray-700 leading-relaxed text-justify\">\r\n          <p className=\"text-sm text-gray-500 italic\">\r\n            {t(\"privacy.lastUpdated\")}\r\n          </p>\r\n\r\n          <div>\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.section1.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.section1.content\")}\r\n            </p>\r\n          </div>\r\n\r\n          <div>\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.section2.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.section2.content\")}\r\n            </p>\r\n          </div>\r\n\r\n          <div>\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.section3.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.section3.content\")}\r\n            </p>\r\n          </div>\r\n\r\n          <div>\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.section4.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.section4.content\")}\r\n            </p>\r\n          </div>\r\n\r\n          <div>\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.section5.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.section5.content\")}\r\n            </p>\r\n          </div>\r\n\r\n          <div className=\"bg-blue-50 border-l-4 border-blue-500 p-4 rounded\">\r\n            <h2 className=\"text-xl font-semibold text-gray-800 mb-3\">\r\n              {t(\"privacy.contact.title\")}\r\n            </h2>\r\n            <p className=\"text-base\">\r\n              {t(\"privacy.contact.content\")}\r\n            </p>\r\n          </div>\r\n        </article>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

@@ -42,6 +42,7 @@ type MenuItem = {
       children: [
         { name: t("header.company"), path: "/introduce/company" },
         { name: t("header.employee"), path: "/introduce/employee" },
+        { name: t("header.clauses"), path: "/introduce/clauses" },
       ],
     },
     {

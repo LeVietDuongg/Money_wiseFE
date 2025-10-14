@@ -10,6 +10,7 @@
     "employee": "Đội Ngũ",
     "whereMoney": "Tiền ở đâu",
     "retire55": "Nghỉ hưu 55",
+    "clauses": "Lưu ý pháp lý",
     "lifetimeMoney": "Tiền cả đời",
     "facebook": "Facebook",
     "youtube": "Youtube",
@@ -204,6 +205,19 @@
       "title": "Về Chúng Tôi",
       "subtitle": "Khám phá sứ mệnh và giá trị của chúng tôi"
     },
+    "clauses": {
+      "title": "Lưu Ý Pháp Lý",  
+      "intro": "Nội dung trên trang web này chỉ mang tính chất tham khảo và không phải là lời khuyên tài chính cá nhân. Bạn hoàn toàn chịu trách nhiệm cho mọi quyết định và rủi ro của mình. Việc sử dụng trang web đồng nghĩa bạn chấp nhận các điều khoản của chúng tôi.",
+     "section1":  "Nội dung trên trang web này chỉ nhằm mục đích cung cấp thông tin chung về các dịch vụ tài chính và không nên được coi là lời khuyên tài chính cá nhân.",
+
+      "section2": "Người dùng chịu trách nhiệm hoàn toàn về việc sử dụng thông tin từ trang web này và nên tham khảo ý kiến chuyên gia tài chính trước khi đưa ra quyết định.",
+
+      "section3":  "Chúng tôi không chịu trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào phát sinh từ việc sử dụng thông tin trên trang web này.",
+      "section4":  "Nội dung trên trang web này được bảo vệ bởi luật bản quyền và không được sao chép hoặc phân phối mà không có sự cho phép trước bằng văn bản.",
+      "section5":  "Chúng tôi có quyền thay đổi các điều khoản này bất cứ lúc nào mà không cần thông báo trước. Việc tiếp tục sử dụng trang web đồng nghĩa bạn chấp nhận các điều khoản đã sửa đổi.",
+      "conclusion":  "Bằng việc sử dụng trang web này, bạn đồng ý với các điều khoản và điều kiện đã nêu ở trên. Nếu bạn không đồng ý với bất kỳ phần nào trong số này, vui lòng không sử dụng trang web."
+      
+    },
     "employee": {
       "title": "Đội Ngũ Của Chúng Tôi",
       "subtitle": "Khám phá sứ mệnh và giá trị của chúng tôi",
@@ -390,5 +404,61 @@
     "copyright": "© 2025 MoneyWise. Bản quyền đã được bảo lưu.",
     "privacyPolicy": "Chính Sách Bảo Mật",
     "termsOfUse": "Điều Khoản Sử Dụng"
+  },
+  "privacy": {
+    "title": "Chính Sách Bảo Mật",
+    "lastUpdated": "Cập nhật lần cuối: 14 tháng 10, 2025",
+    "section1": {
+      "title": "1. Thông Tin Chúng Tôi Thu Thập",
+      "content": "Chúng tôi thu thập thông tin cá nhân mà bạn tự nguyện cung cấp khi đăng ký trên trang web của chúng tôi, bày tỏ sự quan tâm đến thông tin về chúng tôi hoặc dịch vụ của chúng tôi, tham gia các hoạt động trên trang web của chúng tôi, hoặc liên hệ với chúng tôi. Điều này bao gồm tên, địa chỉ email, số điện thoại của bạn và bất kỳ thông tin nào khác mà bạn chọn cung cấp."
+    },
+    "section2": {
+      "title": "2. Cách Chúng Tôi Sử Dụng Thông Tin Của Bạn",
+      "content": "Chúng tôi sử dụng thông tin thu thập được để cung cấp, duy trì và cải thiện dịch vụ của mình, giao tiếp với bạn về các sản phẩm và dịch vụ có thể khiến bạn quan tâm, phản hồi các câu hỏi của bạn và cung cấp hỗ trợ khách hàng, tuân thủ các nghĩa vụ pháp lý, và bảo vệ quyền lợi của chúng tôi cũng như quyền lợi của người dùng."
+    },
+    "section3": {
+      "title": "3. Chia Sẻ và Tiết Lộ Thông Tin",
+      "content": "Chúng tôi không bán, trao đổi hoặc cho thuê thông tin cá nhân của bạn cho bên thứ ba. Chúng tôi có thể chia sẻ thông tin của bạn với các nhà cung cấp dịch vụ đáng tin cậy hỗ trợ chúng tôi vận hành trang web và kinh doanh, miễn là các bên đó đồng ý giữ bí mật thông tin này. Chúng tôi cũng có thể tiết lộ thông tin của bạn khi được yêu cầu bởi pháp luật hoặc để bảo vệ quyền lợi của chúng tôi."
+    },
+    "section4": {
+      "title": "4. Bảo Mật Dữ Liệu",
+      "content": "Chúng tôi thực hiện các biện pháp kỹ thuật và tổ chức thích hợp để bảo vệ thông tin cá nhân của bạn khỏi việc truy cập, thay đổi, tiết lộ hoặc phá hủy trái phép. Tuy nhiên, không có phương pháp truyền tải qua internet hoặc lưu trữ điện tử nào an toàn 100%, và chúng tôi không thể đảm bảo an toàn tuyệt đối."
+    },
+    "section5": {
+      "title": "5. Quyền Của Bạn",
+      "content": "Bạn có quyền truy cập, sửa đổi hoặc xóa thông tin cá nhân của mình. Bạn cũng có thể phản đối hoặc hạn chế một số xử lý dữ liệu của bạn. Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi bằng thông tin được cung cấp bên dưới."
+    },
+    "contact": {
+      "title": "Liên Hệ Chúng Tôi",
+      "content": "Nếu bạn có bất kỳ câu hỏi nào về Chính Sách Bảo Mật này, vui lòng liên hệ với chúng tôi tại contact@moneywise.vn hoặc 3 Nguyễn Cơ Thạch, Phường An Khánh, Quận 2, TP.HCM."
+    }
+  },
+  "terms": {
+    "title": "Điều Khoản Sử Dụng",
+    "lastUpdated": "Cập nhật lần cuối: 14 tháng 10, 2025",
+    "section1": {
+      "title": "1. Chấp Nhận Điều Khoản",
+      "content": "Bằng việc truy cập và sử dụng trang web này, bạn chấp nhận và đồng ý bị ràng buộc bởi các điều khoản và quy định của thỏa thuận này. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng trang web hoặc dịch vụ của chúng tôi."
+    },
+    "section2": {
+      "title": "2. Sử Dụng Dịch Vụ",
+      "content": "Bạn đồng ý chỉ sử dụng dịch vụ của chúng tôi cho các mục đích hợp pháp và phù hợp với các Điều Khoản Sử Dụng này. Bạn không được sử dụng dịch vụ của chúng tôi theo bất kỳ cách nào có thể làm hỏng, vô hiệu hóa, quá tải hoặc làm suy yếu máy chủ hoặc mạng của chúng tôi, hoặc can thiệp vào việc sử dụng và hưởng thụ dịch vụ của bất kỳ bên nào khác."
+    },
+    "section3": {
+      "title": "3. Sở Hữu Trí Tuệ",
+      "content": "Tất cả nội dung trên trang web này, bao gồm văn bản, đồ họa, logo, hình ảnh và phần mềm, là tài sản của MoneyWise Vietnam hoặc các nhà cung cấp nội dung của chúng tôi và được bảo vệ bởi luật bản quyền của Việt Nam và quốc tế. Bạn không được sao chép, phân phối hoặc tạo các tác phẩm phái sinh từ bất kỳ nội dung nào mà không có sự cho phép bằng văn bản của chúng tôi."
+    },
+    "section4": {
+      "title": "4. Giới Hạn Trách Nhiệm",
+      "content": "MoneyWise Vietnam sẽ không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hậu quả hoặc mang tính trừng phạt nào phát sinh từ việc bạn sử dụng hoặc không thể sử dụng dịch vụ của chúng tôi, ngay cả khi chúng tôi đã được thông báo về khả năng xảy ra thiệt hại đó. Tổng trách nhiệm của chúng tôi đối với bạn cho tất cả các khiếu nại phát sinh từ việc bạn sử dụng dịch vụ của chúng tôi sẽ không vượt quá số tiền bạn đã trả cho chúng tôi, nếu có."
+    },
+    "section5": {
+      "title": "5. Luật Điều Chỉnh",
+      "content": "Các Điều Khoản Sử Dụng này sẽ được điều chỉnh và giải thích theo luật pháp Việt Nam, không tính đến các quy định về xung đột pháp luật. Mọi tranh chấp phát sinh từ các điều khoản này sẽ được giải quyết tại các tòa án có thẩm quyền của Việt Nam."
+    },
+    "acceptance": {
+      "title": "Thỏa Thuận",
+      "content": "Bằng việc sử dụng trang web và dịch vụ của chúng tôi, bạn xác nhận rằng bạn đã đọc, hiểu và đồng ý bị ràng buộc bởi các Điều Khoản Sử Dụng này."
+    }
   }
 }

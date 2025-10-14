@@ -9,13 +9,13 @@ type HeroProps = {
 export default function HeroSection({ image, title, subtitle }: HeroProps) {
   return (
     <section className="relative w-full">
-      <div className="relative w-full aspect-[16/9] sm:aspect-[1200/380] max-h-[380px]">
+      <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]">
         <Image
           src={image}
           alt={title}
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
 
         {/* Overlay chữ */}

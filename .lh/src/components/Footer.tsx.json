@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1759722264652,
@@ -48,6 +48,10 @@
                 {
                     "date": 1760001814591,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,8 @@\n                   {t(\"footer.address\")}\r\n                 </span>\r\n               </li>\r\n               <li className=\"flex items-center justify-center md:justify-start gap-3\">\r\n-                <FaPhoneAlt className=\"shrink-0\" />\r\n               </li>\r\n               <li className=\"flex items-center justify-center md:justify-start gap-3\">\r\n                 <FaEnvelope className=\"shrink-0\" />\r\n                 <span>{t(\"footer.email\")}</span>\r\n"
+                },
+                {
+                    "date": 1760428553187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { FaFacebook, FaLinkedin, FaTiktok, FaYoutube } from \"react-icons/fa\";\r\n import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from \"react-icons/fa\";\r\n import Logo from \"../../public/logo_footer.svg\";\r\n import Image from \"next/image\";\r\n+import Link from \"next/link\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n export default function Footer() {\r\n   const { t } = useLanguage();\r\n@@ -16,9 +17,9 @@\n         <div className=\"grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left\">\r\n           {/* Left - Company Info */}\r\n           <div>\r\n             <div className=\"flex justify-center md:justify-start\">\r\n-              <Image alt=\"Banner\" src={Logo} width={280} height={280} />\r\n+              <Image alt=\"Banner\" src={Logo} width={150} height={50} />\r\n             </div>\r\n             <p className=\"text-gray-300 mb-6 mt-4 md:mt-2 max-w-xs mx-auto md:mx-0\">\r\n               {t(\"footer.companyDescription\")}\r\n             </p>\r\n@@ -75,14 +76,14 @@\n         {/* Bottom Bar */}\r\n         <div className=\"border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 text-center\">\r\n           <p>{t(\"footer.copyright\")}</p>\r\n           <div className=\"flex gap-6 mt-4 md:mt-0\">\r\n-            <a href=\"#\" className=\"hover:text-white transition\">\r\n+            <Link href=\"/privacy-policy\" className=\"hover:text-white transition\">\r\n               {t(\"footer.privacyPolicy\")}\r\n-            </a>\r\n-            <a href=\"#\" className=\"hover:text-white transition\">\r\n+            </Link>\r\n+            <Link href=\"/terms-of-use\" className=\"hover:text-white transition\">\r\n               {t(\"footer.termsOfUse\")}\r\n-            </a>\r\n+            </Link>\r\n           </div>\r\n         </div>\r\n       </div>\r\n     </footer>\r\n"
                 }
             ],
             "date": 1759722264652,

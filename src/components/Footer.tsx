@@ -4,6 +4,7 @@ import { FaFacebook, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Logo from "../../public/logo_footer.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -76,12 +77,12 @@ export default function Footer() {
         <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 text-center">
           <p>{t("footer.copyright")}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition">
+            <Link href="/privacy-policy" className="hover:text-white transition">
               {t("footer.privacyPolicy")}
-            </a>
-            <a href="#" className="hover:text-white transition">
+            </Link>
+            <Link href="/terms-of-use" className="hover:text-white transition">
               {t("footer.termsOfUse")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

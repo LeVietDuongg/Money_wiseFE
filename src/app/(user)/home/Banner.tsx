@@ -9,14 +9,14 @@ export default function Banner() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+    <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px] lg:max-h-[600px]">
       {/* Background Image */}
       <Image
         alt="Banner Bottom"
         src={Banner1}
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
       />
 
       {/* Desktop layout */}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/(user)/introduce/clauses/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1760423953568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1760424215690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,29 @@\n \"use client\";\r\n \r\n-import Link from \"next/link\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n-export default function IntroducePage\n\\ No newline at end of file\n+export default function ClausesPage() {\r\n+\tconst { t } = useLanguage();\r\n+\r\n+\treturn (\r\n+\t\t<section className=\"w-full h-full bg-gray-50 py-12 px-6\">\r\n+\t\t\t<div className=\"container mx-auto max-w-4xl bg-white shadow-md rounded-lg p-8\">\r\n+\t\t\t\t<h1 className=\"text-3xl font-bold text-gray-800 mb-6\">\r\n+\t\t\t\t\t\t\t{t(\"clauses.title\")}\r\n+\t\t\t\t</h1>\r\n+\t\t\t\t<article className=\"space-y-4 text-gray-700 leading-relaxed\">\r\n+\t\t\t\t\t<p>\r\n+\t\t\t\t\t\t{t(\r\n+\t\t\t\t\t\t\t\t\t\t\"clauses.intro\"\r\n+\t\t\t\t\t\t)}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t<p>\r\n+\t\t\t\t\t\t{t(\r\n+\t\t\t\t\t\t\t\t\t\t\"clauses.usage\"\r\n+\t\t\t\t\t\t)}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t</article>\r\n+\t\t\t</div>\r\n+\t\t</section>\r\n+\t);\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1760425412317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,9 @@\n \t\t\t\t\t\t{t(\r\n \t\t\t\t\t\t\t\t\t\t\"clauses.intro\"\r\n \t\t\t\t\t\t)}\r\n \t\t\t\t\t</p>\r\n-\t\t\t\t\t<p>\r\n-\t\t\t\t\t\t{t(\r\n-\t\t\t\t\t\t\t\t\t\t\"clauses.usage\"\r\n-\t\t\t\t\t\t)}\r\n-\t\t\t\t\t</p>\r\n+\t\t\t\r\n \t\t\t\t</article>\r\n \t\t\t</div>\r\n \t\t</section>\r\n \t);\r\n"
+                },
+                {
+                    "date": 1760426617258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,39 @@\n \r\n \treturn (\r\n \t\t<section className=\"w-full h-full bg-gray-50 py-12 px-6\">\r\n \t\t\t<div className=\"container mx-auto max-w-4xl bg-white shadow-md rounded-lg p-8\">\r\n-\t\t\t\t<h1 className=\"text-3xl font-bold text-gray-800 mb-6\">\r\n-\t\t\t\t\t\t\t{t(\"clauses.title\")}\r\n+\t\t\t\t<h1 className=\"text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-green-700 pb-4\">\r\n+\t\t\t\t\t{t(\"introduce.clauses.title\")}\r\n \t\t\t\t</h1>\r\n-\t\t\t\t<article className=\"space-y-4 text-gray-700 leading-relaxed\">\r\n-\t\t\t\t\t<p>\r\n-\t\t\t\t\t\t{t(\r\n-\t\t\t\t\t\t\t\t\t\t\"clauses.intro\"\r\n-\t\t\t\t\t\t)}\r\n+\t\t\t\t<article className=\"space-y-6 text-gray-700 leading-relaxed text-justify\">\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.intro\")}\r\n \t\t\t\t\t</p>\r\n-\t\t\t\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.section1\")}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.section2\")}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.section3\")}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.section4\")}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.section5\")}\r\n+\t\t\t\t\t</p>\r\n+\t\t\t\t\t\r\n+\t\t\t\t\t<p className=\"text-base font-semibold text-gray-900 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded\">\r\n+\t\t\t\t\t\t{t(\"introduce.clauses.conclusion\")}\r\n+\t\t\t\t\t</p>\r\n \t\t\t\t</article>\r\n \t\t\t</div>\r\n \t\t</section>\r\n \t);\r\n"
+                }
+            ],
+            "date": 1760423953568,
+            "name": "Commit-0",
+            "content": "\"use client\";\r\n\r\nimport Link from \"next/link\";\r\nimport { useLanguage } from \"@/contexts/LanguageContext\";\r\n\r\nexport default function IntroducePage"
+        }
+    ]
+}

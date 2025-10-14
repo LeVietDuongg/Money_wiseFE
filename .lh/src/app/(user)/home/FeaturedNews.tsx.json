@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1759720723204,
@@ -84,6 +84,14 @@
                 {
                     "date": 1760088557729,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n import know from \"@/assets/topic/know.png\";\r\n import cani55 from \"@/assets/topic/cani55.png\";\r\n import begintoadvance from \"@/assets/topic/begintoadvance.png\";\r\n-import mistake from \"@/assets/topic/mistake.png\";\r\n+import mistake from \"@/assets/topic/sailam.jpg\";\r\n import lifetimemoney from \"@/assets/topic/lifttimemoeny.png\";\r\n import retail55 from \"@/assets/topic/retail55.png\";\r\n \r\n export default function FeaturedNews() {\r\n"
+                },
+                {
+                    "date": 1760427174834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,9 +115,9 @@\n \r\n         {/* View All Link - chỉ là text */}\r\n         <div className=\"flex justify-center mt-12\">\r\n           <a\r\n-            href=\"#\"\r\n+            href=\"topic/lifetime-money\"\r\n             className=\"text-blue-600 font-semibold hover:underline text-lg\"\r\n           >\r\n             {t(\"home.featuredNews.viewAll\")} →\r\n           </a>\r\n"
+                },
+                {
+                    "date": 1760427210752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,9 +115,9 @@\n \r\n         {/* View All Link - chỉ là text */}\r\n         <div className=\"flex justify-center mt-12\">\r\n           <a\r\n-            href=\"topic/lifetime-money\"\r\n+            href=\"topic/where-money\"\r\n             className=\"text-blue-600 font-semibold hover:underline text-lg\"\r\n           >\r\n             {t(\"home.featuredNews.viewAll\")} →\r\n           </a>\r\n"
                 }
             ],
             "date": 1759720723204,

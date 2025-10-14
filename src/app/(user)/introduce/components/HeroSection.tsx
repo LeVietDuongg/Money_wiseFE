@@ -10,14 +10,13 @@ export default function HeroSection() {
   return (
     <section className="relative w-full">
       {/* Container to maintain aspect ratio, responsive on all screens */}
-      <div className="relative w-full aspect-[1200/380] max-h-[540px]">
+      <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]">
         <Image
           src={BannerImage}
           alt="About Us Banner"
           fill
-
           priority
-          className="object-cover" // fill image without distortion
+          className="object-cover object-center" // fill image without distortion
         />
 
         {/* Text Overlay with better contrast */}

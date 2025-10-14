@@ -7,7 +7,7 @@ export default function ContactUs() {
   const { t } = useLanguage();
   
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-stone-100">
+    <section id="contact-us" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-bold text-center text-gray-800 mb-3">

@@ -6,12 +6,20 @@ import UserCard from "@/assets/home/image/banner/User.svg";
 import People from "@/assets/home/image/banner/People.svg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const { t } = useLanguage();
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
   const [displayedText, setDisplayedText] = useState("");
+
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById('contact-us');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     // Tạo particles trang trí
@@ -150,7 +158,7 @@ export default function HeroSection() {
       
       <div className="flex flex-col lg:flex-row items-center justify-between w-[95%] lg:w-[90%] py-8 gap-8">
         {/* Text bên trái */}
-        <div className="mx-auto flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 z-10 max-w-xl">
+        <div className="mx-auto flex flex-col items-center lg:items-center text-center lg:text-center space-y-6 z-10 max-w-xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
             <span className="text-orange-500 inline-block min-h-[1.2em]">
               {displayedText}
@@ -179,56 +187,55 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <motion.button 
-              className="relative px-6 py-3 rounded-full bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 text-black font-semibold shadow-xl overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {/* Shine Effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
-                animate={{
-                  x: ["-100%", "200%"],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 1,
-                  ease: "easeInOut" as const,
-                }}
-              />
-              
-              {/* Button Content */}
-              <span className="relative z-10 flex items-center gap-2">
-                {t("home.hero.bookSession")}
-                <motion.span
+              <Link
+                href="/contact"
+                className="relative px-6 py-3 rounded-full bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 text-black font-semibold shadow-xl overflow-hidden group inline-block"
+              >
+                {/* Shine Effect (kept as a background animated layer) */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
                   animate={{
-                    x: [0, 5, 0],
+                    x: ["-100%", "200%"],
                   }}
                   transition={{
-                    duration: 1.5,
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                    ease: "easeInOut" as const,
+                  }}
+                />
+
+                {/* Button Content */}
+                <span className="relative z-10 flex items-center gap-2">
+                  {t("home.hero.bookSession")}
+                  <motion.span
+                    animate={{
+                      x: [0, 5, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut" as const,
+                    }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+
+                {/* Glow Effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-yellow-400/50 blur-xl"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0, 0.5, 0],
+                  }}
+                  transition={{
+                    duration: 2,
                     repeat: Infinity,
                     ease: "easeInOut" as const,
                   }}
-                >
-                  →
-                </motion.span>
-              </span>
-              
-              {/* Glow Effect */}
-              <motion.div
-                className="absolute inset-0 rounded-full bg-yellow-400/50 blur-xl"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0, 0.5, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut" as const,
-                }}
-              />
-            </motion.button>
+                />
+              </Link>
           </motion.div>
         </div>
 

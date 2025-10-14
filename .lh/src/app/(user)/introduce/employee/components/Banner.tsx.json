@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1759734122550,
@@ -12,6 +12,10 @@
                 {
                     "date": 1760347742381,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \"use client\";\r\n \r\n-import BannerImage from \"@/assets/about/banner.svg\";\r\n+import BannerImage from \"@/assets/about/doingunhanvien.jpg\r\n import Image from \"next/image\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n export default function Banner() {\r\n"
+                },
+                {
+                    "date": 1760427517377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \"use client\";\r\n \r\n-import BannerImage from \"@/assets/about/doingunhanvien.jpg\r\n+import BannerImage from \"@/assets/about/concert.jpg\";\r\n import Image from \"next/image\";\r\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n export default function Banner() {\r\n@@ -9,15 +9,15 @@\n   \r\n   return (\r\n     <section className=\"relative w-full\">\r\n       {/* Responsive image aspect ratio */}\r\n-      <div className=\"relative w-full aspect-[1200/380] max-h-[380px]\">\r\n+      <div className=\"relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]\">\r\n         <Image\r\n           src={BannerImage}\r\n           alt=\"Banner\"\r\n           fill\r\n           priority\r\n-          className=\"object-cover\"\r\n+          className=\"object-cover object-center\"\r\n         />\r\n \r\n         {/* Overlay text */}\r\n         <div className=\"absolute inset-0 flex flex-col items-center justify-center text-center px-4\">\r\n"
                 }
             ],
             "date": 1759734122550,

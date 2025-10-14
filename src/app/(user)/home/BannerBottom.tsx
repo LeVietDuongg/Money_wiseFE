@@ -8,14 +8,14 @@ export default function BannerBottom() {
   const { t } = useLanguage();
   
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+    <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px] lg:max-h-[700px]">
       {/* Background Image */}
       <Image
         alt="Banner Bottom"
         src={Banner1}
         fill
         priority
-        className="object-cover brightness-90"
+        className="object-cover object-center brightness-90"
       />
 
       {/* Overlay Text + Input */}

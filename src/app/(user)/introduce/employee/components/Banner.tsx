@@ -1,6 +1,6 @@
 "use client";
 
-import BannerImage from "@/assets/about/doingunhanvien.jpg";
+import BannerImage from "@/assets/about/concert.jpg";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -10,13 +10,13 @@ export default function Banner() {
   return (
     <section className="relative w-full">
       {/* Responsive image aspect ratio */}
-      <div className="relative w-full aspect-[1200/380] max-h-[380px]">
+      <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]">
         <Image
           src={BannerImage}
           alt="Banner"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
 
         {/* Overlay text */}

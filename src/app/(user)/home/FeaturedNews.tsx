@@ -116,7 +116,7 @@ export default function FeaturedNews() {
         {/* View All Link - chỉ là text */}
         <div className="flex justify-center mt-12">
           <a
-            href="#"
+            href="topic/where-money"
             className="text-blue-600 font-semibold hover:underline text-lg"
           >
             {t("home.featuredNews.viewAll")} →
