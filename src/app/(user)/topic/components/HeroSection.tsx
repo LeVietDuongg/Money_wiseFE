@@ -1,13 +1,20 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
+import { usePathname } from "next/navigation";
 
 type HeroProps = {
   image: StaticImageData | string;
   title: string;
   subtitle: string;
-  topicKey?: string; // Add optional topicKey prop
 };
 
-export default function HeroSection({ image, title, subtitle, topicKey }: HeroProps) {
+export default function HeroSection({ image, title, subtitle }: HeroProps) {
+  const pathname = usePathname();
+
+  // Kiểm tra nếu đường dẫn là /topic/retire-55
+  const isRetire55 = pathname === "/topic/retire-55";
+
   return (
     <section className="relative w-full">
       <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] max-h-[400px] sm:max-h-[500px]">
@@ -16,7 +23,7 @@ export default function HeroSection({ image, title, subtitle, topicKey }: HeroPr
           alt={title}
           fill
           priority
-          className={`object-cover ${topicKey === "huutri55" ? "object-bottom" : "object-center"}`}
+          className={`object-cover ${isRetire55 ? "object-top" : "object-center"}`}
         />
 
         {/* Overlay chữ */}
