@@ -121,148 +121,188 @@ type MenuItem = {
 
   return (
     <header
-      className={`w-full flex flex-col items-center z-50 transition-all duration-500 ease-in-out
-      ${isScrolled ? "fixed top-0 bg-white shadow-md py-2" : "relative bg-transparent"}`}
+      className={`w-full z-50 transition-all duration-700 ease-in-out
+      ${isScrolled ? "fixed top-0 bg-white shadow-md" : "relative bg-transparent"}`}
     >
-      {!isScrolled && (
-        <Link href="/" className="flex flex-col items-center transition-all duration-500 ease-in-out">
-          <Image src={Logo} alt="Logo" width={360} height={360} />
-        </Link>
-      )}
-      {!isScrolled && (
-        <div className="w-[85%] border-t border-green-800 transition-all duration-500 ease-in-out"></div>
-      )}
+      <div className="flex flex-col w-full">
+        {/* Tầng 1: Menu + Language */}
+        <div 
+          className={`w-full flex items-center px-6 md:px-12 transition-all duration-700 ease-in-out relative
+          ${isScrolled ? "py-2" : "py-3"}`}
+        >
+          {/* Container cho menu - luôn cố định vị trí, nhưng bị đẩy khi logo xuất hiện */}
+          <div className={`flex items-center justify-between w-full transition-all duration-700 ease-in-out
+          ${isScrolled ? "ml-[200px]" : "ml-0"}`}>
+            <nav className="flex items-center">
+              {/* Desktop Menu */}
+              <div className="hidden md:flex gap-6 lg:gap-8 items-center text-sm">
+                {menuItems.map((item) => {
+                  const isActive = (() => {
+                    if (item.path === "/") {
+                      return pathname === "/" || pathname === "/home";
+                    }
+                    if (item.children) {
+                      return item.children.some(
+                        (child) => child.path && pathname.startsWith(child.path)
+                      );
+                    }
+                    if (item.path) {
+                      return pathname.startsWith(item.path);
+                    }
+                    return false;
+                  })();
 
-      <nav
-        className={`transition-all duration-500 ease-in-out
-        ${isScrolled
-          ? "w-[90%] flex items-center justify-around py-2"
-          : "w-[85%] flex items-center justify-center py-4"
-        }`}
-      >
-        {isScrolled && (
-          <Link href="/" className="hidden md:flex items-center transition-all duration-500 ease-in-out">
-            <Image src={LogoSmall} alt="Logo Small" width={200} height={200} />
-          </Link>
-        )}
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-10 items-center">
-          {menuItems.map((item) => {
-            const isActive = (() => {
-              if (item.path === "/") {
-                return pathname === "/" || pathname === "/home";
-              }
-              if (item.children) {
-                return item.children.some(
-                  (child) => child.path && pathname.startsWith(child.path)
-                );
-              }
-              if (item.path) {
-                return pathname.startsWith(item.path);
-              }
-              return false;
-            })();
-
-            return item.children ? (
-              <div 
-                key={item.name} 
-                className="relative"
-                onMouseEnter={() => setOpenDropdown(item.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <button
-                   className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors relative ${
-                    isActive ? "text-green-800" : "text-gray-800"
-                  }`}
-                >
-                  {item.name} <ChevronDown size={16} />
-                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
-                  )}
-                </button>
-                {openDropdown === item.name && (
-                  <div className="absolute left-0 top-full pt-2 w-52 z-50">
-                    <div className="bg-white border border-gray-200 rounded shadow-lg flex flex-col py-2 transition-all duration-300">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.path}
-                          target={child.path.startsWith("http") ? "_blank" : "_self"}
-                          className={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 text-gray-700 whitespace-nowrap ${
-                            pathname === child.path
-                              ? "font-semibold text-green-800"
-                              : ""
-                          }`}
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          {child.icon && <span>{child.icon}</span>}
-                          {child.name}
-                        </Link>
-                      ))}
+                  return item.children ? (
+                    <div 
+                      key={item.name} 
+                      className="relative"
+                      onMouseEnter={() => setOpenDropdown(item.name)}
+                      onMouseLeave={() => setOpenDropdown(null)}
+                    >
+                      <button
+                        className={`font-semibold flex items-center gap-1 cursor-pointer hover:text-green-700 transition-colors relative ${
+                          isActive ? "text-green-800" : "text-gray-800"
+                        }`}
+                      >
+                        {item.name} <ChevronDown size={16} />
+                        {isActive && (
+                          <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
+                        )}
+                      </button>
+                      {openDropdown === item.name && (
+                        <div className="absolute left-0 top-full pt-2 w-52 z-50">
+                          <div className="bg-white border border-gray-200 rounded shadow-lg flex flex-col py-2 transition-all duration-300">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.name}
+                                href={child.path}
+                                target={child.path.startsWith("http") ? "_blank" : "_self"}
+                                className={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 text-gray-700 whitespace-nowrap ${
+                                  pathname === child.path
+                                    ? "font-semibold text-green-800"
+                                    : ""
+                                }`}
+                                onClick={() => setOpenDropdown(null)}
+                              >
+                                {child.icon && <span>{child.icon}</span>}
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                )}
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.path!}
+                      className={`font-semibold hover:text-green-700 transition-colors relative ${
+                        isActive ? "text-green-800" : "text-gray-800"
+                      }`}
+                    >
+                      {item.name}
+                      {isActive && (
+                        <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
-            ) : (
-              <Link
-                key={item.name}
-                href={item.path!}
-                className={`font-semibold hover:text-green-700 transition-colors relative ${
-                  isActive ? "text-green-800" : "text-gray-800"
-                }`}
-              >
-                {item.name}
-                  {/* ✅ Active line indicator */}
-                {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800"></span>
-                )}
-              </Link>
-            );
-          })}
 
-          {/* Language Dropdown */}
-          <div className="relative" ref={langRef}>
-            <button
-              className="flex items-center gap-1"
-              onClick={() => setIsOpenLang(!isOpenLang)}
-            >
-              <Image
-                src={language === "vi" ? FlagVN : FlagEN}
-                alt={language === "vi" ? "VN" : "EN"}
-                width={24}
-                height={24}
-              />
-              <ChevronDown size={16} />
-            </button>
-            {isOpenLang && (
-              <div className="absolute right-0 mt-2 w-36 bg-white border border-gray-200 rounded shadow-lg flex flex-col transition-all duration-300 z-50">
-                <button
-                  className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 text-left"
-                  onClick={() => handleLanguageChange("vi")}
-                >
-                  <Image src={FlagVN} alt="VN" width={20} height={20} />
-                  {t("header.language.vietnamese")}
-                </button>
-                <button
-                  className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 text-left"
-                  onClick={() => handleLanguageChange("en")}
-                >
-                  <Image src={FlagEN} alt="EN" width={20} height={20} />
-                  {t("header.language.english")}
+              {/* Mobile Menu Button */}
+              <div className="md:hidden flex items-center ml-auto">
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
               </div>
-            )}
+            </nav>
+
+            {/* Language Dropdown - Bên phải */}
+            <div className="flex items-center gap-4">
+              <div className="hidden md:flex items-center gap-4">
+                <div className="relative" ref={langRef}>
+                  <button
+                    className="flex items-center gap-1"
+                    onClick={() => setIsOpenLang(!isOpenLang)}
+                  >
+                    <Image
+                      src={language === "vi" ? FlagVN : FlagEN}
+                      alt={language === "vi" ? "VN" : "EN"}
+                      width={24}
+                      height={24}
+                    />
+                    <ChevronDown size={16} />
+                  </button>
+                  {isOpenLang && (
+                    <div className="absolute right-0 mt-2 w-36 bg-white border border-gray-200 rounded shadow-lg flex flex-col transition-all duration-300 z-50">
+                      <button
+                        className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 text-left"
+                        onClick={() => handleLanguageChange("vi")}
+                      >
+                        <Image src={FlagVN} alt="VN" width={20} height={20} />
+                        {t("header.language.vietnamese")}
+                      </button>
+                      <button
+                        className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 text-left"
+                        onClick={() => handleLanguageChange("en")}
+                      >
+                        <Image src={FlagEN} alt="EN" width={20} height={20} />
+                        {t("header.language.english")}
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <div className="md:hidden flex items-center ml-4">
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Logo nhỏ - absolute position, đẩy vào từ trái khi scroll */}
+          <Link 
+            href="/" 
+            className={`absolute left-6 md:left-12 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
+            ${isScrolled ? "w-[140px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
+          >
+            <Image 
+              src={LogoSmall} 
+              alt="Logo" 
+              width={140} 
+              height={140}
+              className="transition-all duration-700 ease-in-out"
+            />
+          </Link>
+        </div>
+
+        {/* Đường kẻ ngang - ẩn khi scroll */}
+          <div 
+            className={`w-full px-6 md:px-12 transition-all duration-700 ease-in-out overflow-hidden
+            ${isScrolled ? "max-h-0 opacity-0" : "max-h-[1px] opacity-100"}`}
+          >
+            <div className="border-t border-gray-300"></div>
+          </div>
+
+          {/* Tầng 2: Logo lớn - ẩn khi scroll */}
+          <div 
+            className={`w-full px-6 md:px-12 transition-all duration-700 ease-in-out overflow-hidden
+            ${isScrolled ? "max-h-0 py-0 opacity-0" : "max-h-[300px] py-4 opacity-100"}`}
+          >
+            <Link href="/" className="inline-flex items-center">
+              <Image 
+                src={Logo} 
+                alt="Logo" 
+                width={280} 
+                height={280}
+                className="transition-all duration-700 ease-in-out"
+              />
+            </Link>
           </div>
         </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center ml-auto">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </nav>
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
