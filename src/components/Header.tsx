@@ -131,8 +131,8 @@ type MenuItem = {
           ${isScrolled ? "py-6" : "py-3"}`}
         >
           {/* Container cho menu - luôn cố định vị trí, nhưng bị đẩy khi logo xuất hiện */}
-          <div className={`flex items-center w-full transition-all duration-700 ease-in-out
-          ${isScrolled ? "ml-[300px] justify-between" : "ml-0 justify-between"}`}>
+          <div className={`flex items-center gap-8 transition-all duration-700 ease-in-out
+          ${isScrolled ? "ml-[360px]" : "ml-0"}`}>
             <nav className={`flex items-center`}>
               {/* Desktop Menu */}
               <div className="hidden md:flex gap-6 lg:gap-8 items-center text-sm">
@@ -266,7 +266,7 @@ type MenuItem = {
           {/* Logo nhỏ - absolute position, đẩy vào từ trái khi scroll */}
           <Link 
             href="/" 
-            className={`absolute left-6 md:left-12 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
+            className={`absolute left-12 md:left-32 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
             ${isScrolled ? "w-[240px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
           >
             <Image 
