@@ -122,19 +122,16 @@ type MenuItem = {
   return (
     <>
     <header
-      className={`w-full z-50 transition-all duration-700 ease-in-out fixed top-0
-      ${isScrolled ? "bg-white shadow-md" : "md:relative md:bg-transparent bg-white"}`}
+      className={`w-full z-50 transition-all duration-700 ease-in-out
+      ${isScrolled ? "fixed top-0 bg-white shadow-md" : "relative bg-transparent"}`}
     >
-      {/* Mobile Header - Simple, always fixed on top */}
-      <div className="md:hidden w-full bg-white shadow-sm">
-        <div className="flex items-center justify-between px-6 py-3">
+      {/* Mobile Header - Simple */}
+      <div className="md:hidden w-full bg-white">
+        <div className="flex items-center justify-between px-6 py-4">
           <Link href="/">
-            <Image src={Logo} alt="Logo" width={180} height={180} />
+            <Image src={Logo} alt="Logo" width={200} height={200} />
           </Link>
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -144,15 +141,15 @@ type MenuItem = {
       <div className="hidden md:flex flex-col w-full">
         {/* Tầng 1: Menu + Language */}
         <div 
-          className={`w-full flex items-center px-6 md:px-12 transition-all duration-700 ease-in-out relative
-          ${isScrolled ? "py-6" : "py-3"}`}
+          className={`w-full flex items-center px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 transition-all duration-700 ease-in-out relative
+          ${isScrolled ? "py-5 lg:py-6" : "py-3"}`}
         >
           {/* Container cho menu - luôn cố định vị trí, nhưng bị đẩy khi logo xuất hiện */}
-          <div className={`flex items-center gap-8 transition-all duration-700 ease-in-out
-          ${isScrolled ? "ml-[360px]" : "ml-0"}`}>
+          <div className={`flex items-center gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 transition-all duration-700 ease-in-out
+          ${isScrolled ? "ml-[320px] lg:ml-[420px] xl:ml-[520px] 2xl:ml-[620px]" : "ml-0"}`}>
             <nav className={`flex items-center`}>
               {/* Desktop Menu */}
-              <div className="hidden md:flex gap-6 lg:gap-8 items-center text-sm">
+              <div className="hidden md:flex gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 items-center text-sm xl:text-base">
                 {menuItems.map((item) => {
                   const isActive = (() => {
                     if (item.path === "/") {
@@ -269,15 +266,15 @@ type MenuItem = {
           {/* Logo nhỏ - absolute position, đẩy vào từ trái khi scroll */}
           <Link 
             href="/" 
-            className={`absolute left-12 md:left-32 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
-            ${isScrolled ? "w-[240px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
+            className={`absolute left-12 md:left-24 lg:left-40 xl:left-56 2xl:left-72 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
+            ${isScrolled ? "w-[140px] lg:w-[160px] xl:w-[180px] 2xl:w-[200px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
           >
             <Image 
               src={LogoSmall} 
               alt="Logo" 
-              width={140} 
-              height={140}
-              className="transition-all duration-700 ease-in-out"
+              width={120} 
+              height={120}
+              className="transition-all duration-700 ease-in-out w-full h-auto"
             />
           </Link>
         </div>
@@ -355,48 +352,12 @@ type MenuItem = {
               </Link>
             )
           )}
-          
-          {/* Language Selector in Mobile Menu */}
-          <div className="border-t border-gray-200 pt-4 mt-2">
-            <p className="text-sm font-semibold text-gray-600 mb-2">Ngôn ngữ / Language</p>
-            <div className="flex gap-3">
-              <button
-                onClick={() => {
-                  handleLanguageChange("vi");
-                  setIsMenuOpen(false);
-                }}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
-                  language === "vi" 
-                    ? "bg-green-100 text-green-800 font-semibold" 
-                    : "bg-gray-100 text-gray-700"
-                }`}
-              >
-                <Image src={FlagVN} alt="VN" width={20} height={20} />
-                Tiếng Việt
-              </button>
-              <button
-                onClick={() => {
-                  handleLanguageChange("en");
-                  setIsMenuOpen(false);
-                }}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
-                  language === "en" 
-                    ? "bg-green-100 text-green-800 font-semibold" 
-                    : "bg-gray-100 text-gray-700"
-                }`}
-              >
-                <Image src={FlagEN} alt="EN" width={20} height={20} />
-                English
-              </button>
-            </div>
-          </div>
         </div>
       )}
     </header>
     
-    {/* Spacer to prevent content being hidden under fixed header */}
-    <div className="h-[72px] md:h-0"></div>
-    {isScrolled && <div className="hidden md:block h-[88px]"></div>}
+    {/* Spacer để tránh content bị che khi header fixed */}
+    {isScrolled && <div className="h-[88px]"></div>}
     </>
   );
 }
