@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const topics = [
-  { slug: "lifetime-money", title: "lifetime money" },
-  { slug: "retire-55", title: "retire 55" },
-  { slug: "where-money", title: "where money" },
-];
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { topicService } from "@/services/topic.service";
+import { Topic } from "@/types/topic";
 
 export default function TopicListPage() {
   const router = useRouter();

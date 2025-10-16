@@ -4,6 +4,7 @@ import { serviceService } from "@/services/service.service";
 import { Service } from "@/types/service";
 import ServiceCard from "./components/ServiceCard";
 import Link from "next/link";
+import Contact from "@/components/Contact";
 
 export default function ServicesPage() {
   const [services, setServices] = useState<Service[]>([]);
@@ -50,6 +51,10 @@ export default function ServicesPage() {
           Không có dịch vụ nào.
         </p>
       )}
+      
+            <div className="w-[80%] border-t border-green-800 mt-6 mx-auto"></div>
+            <Contact />
     </div>
+    
   );
 }

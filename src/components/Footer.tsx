@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Left - Company Info */}
           <div>
             <div className="flex justify-center md:justify-start">
-              <Image alt="Banner" src={Logo} width={150} height={50} />
+              <Image alt="Banner" src={Logo} width={280} height={280} />
             </div>
             <p className="text-gray-300 mb-6 mt-4 md:mt-2 max-w-xs mx-auto md:mx-0">
               {t("footer.companyDescription")}

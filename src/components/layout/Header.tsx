@@ -6,16 +6,12 @@ import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/Input';
 import {
   MdSearch,
-  MdNotifications,
-  MdMessage,
-  MdCalendarToday,
-  MdShoppingCart,
   MdMenu,
   MdKeyboardArrowDown,
   MdLogout,
 } from 'react-icons/md';
 import { adminAuthService } from '@/services/adminAuth.service';
-
+import Avatar from '@/assets/about/doingunhanvien.jpg'
 interface HeaderProps {
   onMenuClick: () => void;
 }
@@ -77,30 +73,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             <MdSearch size={20} />
           </button>
 
-          <button className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative">
-            <MdNotifications size={20} />
-            <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-medium text-white">
-              3
-            </span>
-          </button>
-
-          <button className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative">
-            <MdMessage size={20} />
-            <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-medium text-white">
-              5
-            </span>
-          </button>
-
-          <button className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-            <MdCalendarToday size={20} />
-          </button>
-
-          <button className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative">
-            <MdShoppingCart size={20} />
-            <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-600 text-[10px] font-medium text-white">
-              2
-            </span>
-          </button>
+       
         </div>
 
         {/* User Profile Dropdown */}
@@ -110,7 +83,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             <Image
-              src="/default-avatar.png"
+              src={Avatar}
               alt="Profile"
               width={32}
               height={32}

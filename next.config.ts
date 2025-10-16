@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-   images: {
+  images: {
+
+
     // 🧠 Cho phép load ảnh từ các domain ngoài
     remotePatterns: [
       {

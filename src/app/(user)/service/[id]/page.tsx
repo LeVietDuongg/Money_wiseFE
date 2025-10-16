@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { serviceService } from "@/services/service.service";
@@ -26,8 +27,11 @@ export default function ServiceDetailPage() {
     fetchData();
   }, [id]);
 
-  if (loading) return <p className="text-center mt-10">Đang tải dữ liệu...</p>;
-  if (!service) return <p className="text-center mt-10 text-gray-500">Không tìm thấy dịch vụ.</p>;
+  if (loading)
+    return <p className="text-center mt-10 text-gray-500">Đang tải dữ liệu...</p>;
+
+  if (!service)
+    return <p className="text-center mt-10 text-gray-500">Không tìm thấy dịch vụ.</p>;
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-10">

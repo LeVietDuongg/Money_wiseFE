@@ -1,28 +1,67 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { bannerService } from "@/services/banner.service";
 import Card from "@/assets/home/image/banner/Card.svg";
 import UserCard from "@/assets/home/image/banner/User.svg";
 import People from "@/assets/home/image/banner/People.svg";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { Banner } from "@/types/banner";
 
 export default function HeroSection() {
   const { t } = useLanguage();
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
+  const [banners, setBanners] = useState<Banner[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
+  const [particles, setParticles] = useState<
+    Array<{ id: number; x: number; y: number; delay: number }>
+  >([]);
 
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById('contact-us');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+  //  Lấy banner từ backend
   useEffect(() => {
-    // Tạo particles trang trí
+    const fetchBanners = async () => {
+      try {
+        const res = await bannerService.getByPosition("home");
+        setBanners(res || []);
+      } catch (err) {
+        console.error(" Fetch banners failed:", err);
+        setBanners([]); // fallback
+      }
+    };
+    fetchBanners();
+  }, []);
+
+  //  Slide tự động
+  useEffect(() => {
+    if (banners.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % banners.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [banners]);
+
+  //  Typewriter effect
+  useEffect(() => {
+    const fullText = t("home.hero.title1");
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.slice(0, index));
+        index++;
+      } else {
+        index = 0;
+        setDisplayedText("");
+      }
+    }, 150);
+    return () => clearInterval(interval);
+  }, [t]);
+
+  //  Tạo particles
+  useEffect(() => {
     const particleArray = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -32,29 +71,70 @@ export default function HeroSection() {
     setParticles(particleArray);
   }, []);
 
-  useEffect(() => {
-    // Typewriter effect cho title1
-    const fullText = t("home.hero.title1");
-    let currentIndex = 0;
-    setDisplayedText("");
+  //  Nếu có banner từ backend → hiển thị slide
+  if (banners.length > 0) {
+    return (
+      <section className="relative w-full overflow-hidden h-[500px] md:h-[600px] lg:h-[680px] rounded-lg">
+        {banners.map((banner, index) => (
+          <motion.div
+            key={banner._id || index}
+            className="absolute inset-0 w-full h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentIndex ? 1 : 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              src={banner.imageUrl}
+              alt={banner.title || "Banner"}
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-6">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-3xl md:text-5xl font-bold"
+              >
+                {banner.title || ""}
+              </motion.h2>
+              {banner.createdAt && (
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="mt-4 text-lg md:text-xl max-w-2xl"
+                >
+                  {banner.title}
+                </motion.p>
+              )}
+              {banner.link && (
+                <Link
+                  href={banner.link}
+                  className="mt-6 px-6 py-3 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full text-black font-semibold shadow-xl"
+                >
+                  {t("home.hero.bookSession")}
+                </Link>
+              )}
+            </div>
+          </motion.div>
+        ))}
 
-    const typeWriter = () => {
-      if (currentIndex <= fullText.length) {
-        setDisplayedText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        // Reset sau 2 giây khi hoàn thành
-        setTimeout(() => {
-          currentIndex = 0;
-          setDisplayedText("");
-        }, 2000);
-      }
-    };
-
-    const interval = setInterval(typeWriter, 150); // 150ms mỗi chữ
-
-    return () => clearInterval(interval);
-  }, [t]);
+        {/* Dots Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+          {banners.map((_, idx) => (
+            <div
+              key={idx}
+              className={`w-3 h-3 rounded-full transition-all ${
+                idx === currentIndex ? "bg-orange-400 scale-125" : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -177,7 +257,8 @@ export default function HeroSection() {
             {" " + t("home.hero.title2")}
             {" " + t("home.hero.title3")}
           </h2>
-          <p className="text-gray-900 text-base md:text-lg">
+
+          <p className="text-gray-900 text-base md:text-lg leading-relaxed">
             {t("home.hero.subtitle")}
           </p>
 

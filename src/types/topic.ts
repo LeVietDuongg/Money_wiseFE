@@ -1,38 +1,19 @@
-import { StaticImageData } from "next/image";
-
-export interface Post {
-  _id?: string;
-  id?: number;
-  title: string;
-  excerpt: string;
-  content?: string;
-  contentBeforeVideo?: string;
-  contentAfterVideo?: string;
-  type: "image" | "video";
-  image?: StaticImageData | string;
-  videoUrl?: string;
-  author: string;
-  topic?: string | Topic;
-  topicSlug?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
+// src/types/topic.ts
 export interface Topic {
-  _id?: string;
+  _id: string;
   slug: string;
   title: string;
   subtitle?: string;
-  banner?: StaticImageData | string;
-  posts?: Post[];
+  banner?: string;
   createdAt?: string;
   updatedAt?: string;
 }
 
-export interface CreatePostDTO {
-  topicSlug: string;
+export interface Post {
+  _id: string;
+  topic: Topic | string;
   title: string;
-  excerpt?: string;
+  excerpt: string;
   author: string;
   type: "image" | "video";
   image?: string;
@@ -40,4 +21,20 @@ export interface CreatePostDTO {
   content?: string;
   contentBeforeVideo?: string;
   contentAfterVideo?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
+// src/types/topic.ts
+export interface CreatePostDTO {
+  topicSlug: string;      // bắt buộc, backend cần
+  title: string;          // bắt buộc
+  excerpt?: string;
+  author: string;         // bắt buộc
+  type: "image" | "video"; // mặc định "image" nếu muốn
+  image?: string;
+  videoUrl?: string;
+  content?: string;
+  contentBeforeVideo?: string;
+  contentAfterVideo?: string;
+}
+
