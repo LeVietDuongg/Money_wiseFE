@@ -141,15 +141,15 @@ type MenuItem = {
       <div className="hidden md:flex flex-col w-full">
         {/* Tầng 1: Menu + Language */}
         <div 
-          className={`w-full flex items-center px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 transition-all duration-700 ease-in-out relative
+          className={`w-full flex items-center px-6 md:px-6 lg:px-8 xl:px-12 2xl:px-20 transition-all duration-700 ease-in-out relative
           ${isScrolled ? "py-5 lg:py-6" : "py-3"}`}
         >
           {/* Container cho menu - luôn cố định vị trí, nhưng bị đẩy khi logo xuất hiện */}
-          <div className={`flex items-center gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 transition-all duration-700 ease-in-out
-          ${isScrolled ? "ml-[320px] lg:ml-[420px] xl:ml-[520px] 2xl:ml-[620px]" : "ml-0"}`}>
+          <div className={`flex items-center gap-4 lg:gap-6 xl:gap-8 2xl:gap-12 transition-all duration-700 ease-in-out
+          ${isScrolled ? "ml-[280px] lg:ml-[320px] xl:ml-[400px] 2xl:ml-[700px]" : "ml-0"}`}>
             <nav className={`flex items-center`}>
               {/* Desktop Menu */}
-              <div className="hidden md:flex gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 items-center text-sm xl:text-base">
+              <div className="hidden md:flex gap-4 lg:gap-6 xl:gap-8 2xl:gap-12 items-center text-sm 2xl:text-base">
                 {menuItems.map((item) => {
                   const isActive = (() => {
                     if (item.path === "/") {
@@ -266,8 +266,8 @@ type MenuItem = {
           {/* Logo nhỏ - absolute position, đẩy vào từ trái khi scroll */}
           <Link 
             href="/" 
-            className={`absolute left-12 md:left-24 lg:left-40 xl:left-56 2xl:left-72 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
-            ${isScrolled ? "w-[140px] lg:w-[160px] xl:w-[180px] 2xl:w-[200px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
+            className={`absolute left-8 md:left-12 lg:left-16 xl:left-24 2xl:left-96 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
+            ${isScrolled ? "w-[140px] lg:w-[150px] xl:w-[160px] 2xl:w-[220px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
           >
             <Image 
               src={LogoSmall} 
