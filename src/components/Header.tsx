@@ -120,11 +120,28 @@ type MenuItem = {
   }, []);
 
   return (
+    <>
     <header
-      className={`w-full z-50 transition-all duration-700 ease-in-out
-      ${isScrolled ? "fixed top-0 bg-white shadow-md" : "relative bg-transparent"}`}
+      className={`w-full z-50 transition-all duration-700 ease-in-out fixed top-0
+      ${isScrolled ? "bg-white shadow-md" : "md:relative md:bg-transparent bg-white"}`}
     >
-      <div className="flex flex-col w-full">
+      {/* Mobile Header - Simple, always fixed on top */}
+      <div className="md:hidden w-full bg-white shadow-sm">
+        <div className="flex items-center justify-between px-6 py-3">
+          <Link href="/">
+            <Image src={Logo} alt="Logo" width={180} height={180} />
+          </Link>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Desktop Header - With scroll effects */}
+      <div className="hidden md:flex flex-col w-full">
         {/* Tầng 1: Menu + Language */}
         <div 
           className={`w-full flex items-center px-6 md:px-12 transition-all duration-700 ease-in-out relative
@@ -208,13 +225,6 @@ type MenuItem = {
                   );
                 })}
               </div>
-
-              {/* Mobile Menu Button */}
-              <div className="md:hidden flex items-center ml-auto">
-                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-              </div>
             </nav>
 
             {/* Language Dropdown - Bên phải */}
@@ -252,13 +262,6 @@ type MenuItem = {
                     </div>
                   )}
                 </div>
-              </div>
-
-              {/* Mobile Menu Button */}
-              <div className="md:hidden flex items-center ml-4">
-                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
               </div>
             </div>
           </div>
@@ -306,7 +309,7 @@ type MenuItem = {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="md:hidden w-full bg-white shadow-lg px-6 py-4 flex flex-col gap-4 transition-all duration-300 ease-in-out">
+        <div className="w-full md:hidden bg-white shadow-lg px-6 py-4 flex flex-col gap-4 transition-all duration-300 ease-in-out">
           {menuItems.map((item) =>
             item.children ? (
               <div key={item.name} className="flex flex-col">
@@ -352,8 +355,48 @@ type MenuItem = {
               </Link>
             )
           )}
+          
+          {/* Language Selector in Mobile Menu */}
+          <div className="border-t border-gray-200 pt-4 mt-2">
+            <p className="text-sm font-semibold text-gray-600 mb-2">Ngôn ngữ / Language</p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  handleLanguageChange("vi");
+                  setIsMenuOpen(false);
+                }}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
+                  language === "vi" 
+                    ? "bg-green-100 text-green-800 font-semibold" 
+                    : "bg-gray-100 text-gray-700"
+                }`}
+              >
+                <Image src={FlagVN} alt="VN" width={20} height={20} />
+                Tiếng Việt
+              </button>
+              <button
+                onClick={() => {
+                  handleLanguageChange("en");
+                  setIsMenuOpen(false);
+                }}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
+                  language === "en" 
+                    ? "bg-green-100 text-green-800 font-semibold" 
+                    : "bg-gray-100 text-gray-700"
+                }`}
+              >
+                <Image src={FlagEN} alt="EN" width={20} height={20} />
+                English
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </header>
+    
+    {/* Spacer to prevent content being hidden under fixed header */}
+    <div className="h-[72px] md:h-0"></div>
+    {isScrolled && <div className="hidden md:block h-[88px]"></div>}
+    </>
   );
 }
