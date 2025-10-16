@@ -57,7 +57,7 @@ export default function PostPage() {
       ) : (
         post.image && (
           <img
-            src={typeof post.image === 'string' ? post.image : post.image.src}
+            src={post.image}
             alt={post.title}
             className="w-full rounded-lg shadow"
           />

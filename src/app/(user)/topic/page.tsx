@@ -1,19 +1,42 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { topicService } from "@/services/topic.service";
 import { Topic } from "@/types/topic";
 
 export default function TopicListPage() {
   const router = useRouter();
+  const [topics, setTopics] = useState<Topic[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTopics = async () => {
+      try {
+        const data = await topicService.getAll();
+        setTopics(data);
+      } catch (error) {
+        console.error("Error fetching topics:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTopics();
+  }, []);
 
   const handleTopicClick = (slug: string) => {
     router.push(`/topic/${slug}`);
   };
+
+  if (loading) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-10 text-center">
+        <p className="text-lg">Đang tải...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
