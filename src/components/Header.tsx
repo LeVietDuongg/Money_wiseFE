@@ -128,12 +128,12 @@ type MenuItem = {
         {/* Tầng 1: Menu + Language */}
         <div 
           className={`w-full flex items-center px-6 md:px-12 transition-all duration-700 ease-in-out relative
-          ${isScrolled ? "py-2" : "py-3"}`}
+          ${isScrolled ? "py-6" : "py-3"}`}
         >
           {/* Container cho menu - luôn cố định vị trí, nhưng bị đẩy khi logo xuất hiện */}
-          <div className={`flex items-center justify-between w-full transition-all duration-700 ease-in-out
-          ${isScrolled ? "ml-[200px]" : "ml-0"}`}>
-            <nav className="flex items-center">
+          <div className={`flex items-center w-full transition-all duration-700 ease-in-out
+          ${isScrolled ? "ml-[300px] justify-between" : "ml-0 justify-between"}`}>
+            <nav className={`flex items-center`}>
               {/* Desktop Menu */}
               <div className="hidden md:flex gap-6 lg:gap-8 items-center text-sm">
                 {menuItems.map((item) => {
@@ -153,8 +153,8 @@ type MenuItem = {
                   })();
 
                   return item.children ? (
-                    <div 
-                      key={item.name} 
+                    <div
+                      key={item.name}
                       className="relative"
                       onMouseEnter={() => setOpenDropdown(item.name)}
                       onMouseLeave={() => setOpenDropdown(null)}
@@ -267,7 +267,7 @@ type MenuItem = {
           <Link 
             href="/" 
             className={`absolute left-6 md:left-12 top-0 bottom-0 flex items-center transition-all duration-700 ease-in-out overflow-hidden
-            ${isScrolled ? "w-[140px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
+            ${isScrolled ? "w-[240px] opacity-100" : "w-0 opacity-0 pointer-events-none"}`}
           >
             <Image 
               src={LogoSmall} 
@@ -290,7 +290,7 @@ type MenuItem = {
           {/* Tầng 2: Logo lớn - ẩn khi scroll */}
           <div 
             className={`w-full px-6 md:px-12 transition-all duration-700 ease-in-out overflow-hidden
-            ${isScrolled ? "max-h-0 py-0 opacity-0" : "max-h-[300px] py-4 opacity-100"}`}
+            ${isScrolled ? "max-h-0 py-0 opacity-0" : "max-h-[400px] py-8 opacity-100"}`}
           >
             <Link href="/" className="inline-flex items-center">
               <Image 
