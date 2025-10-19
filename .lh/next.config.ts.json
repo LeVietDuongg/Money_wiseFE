@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1760062110544,
@@ -56,6 +56,10 @@
                 {
                     "date": 1760429818429,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,8 +76,14 @@\n         hostname: \"cdn.tgdd.vn\",\r\n         port: \"\",\r\n         pathname: \"/**\",\r\n       },\r\n+      {\r\n+        protocol: \"https\",\r\n+        hostname: \"random.com.vn\",\r\n+        port: \"\",\r\n+        pathname: \"/**\",\r\n+      },\r\n     ],\r\n   },\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1760855165996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,20 @@\n import type { NextConfig } from \"next\";\r\n \r\n const nextConfig: NextConfig = {\r\n-   images: {\r\n+  images: {\r\n+\r\n+\r\n     // 🧠 Cho phép load ảnh từ các domain ngoài\r\n     remotePatterns: [\r\n       {\r\n         protocol: \"https\",\r\n+        hostname: \"dudi-moneywise-be.onrender.com\",\r\n+        port: \"\",\r\n+        pathname: \"/**\",\r\n+      },\r\n+      {\r\n+        protocol: \"https\",\r\n         hostname: \"example.com\",\r\n         port: \"\",\r\n         pathname: \"/**\",\r\n       },\r\n"
                 }
             ],
             "date": 1760062110544,

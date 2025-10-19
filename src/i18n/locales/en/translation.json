@@ -164,7 +164,14 @@
         "subject": "Subject",
         "phone": "Phone Number",
         "message": "Message *",
-        "submit": "Send Message"
+        "submit": "Send Message",
+        "topics": {
+          "consultation": "Financial Consultation",
+          "investment": "Investment",
+          "retirement": "Retirement Planning",
+          "insurance": "Insurance",
+          "other": "Other"
+        }
       },
       "note": {
         "title": "Important Note:",

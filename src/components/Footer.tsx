@@ -14,9 +14,9 @@ export default function Footer() {
     <footer className="bg-gradient-to-r from-[#002D17] via-[#002D18] to-[#2E8B57] text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
         {/* Grid chính */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
-          {/* Left - Company Info */}
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-10 gap-8 text-center md:text-left">
+          {/* Left - Company Info (4 cột) */}
+          <div className="md:col-span-4">
             <div className="flex justify-center md:justify-start">
               <Image alt="Banner" src={Logo} width={280} height={280} />
             </div>
@@ -31,8 +31,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Middle - Services */}
-          <div>
+          {/* Middle - Services (2 cột) */}
+          <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4 border-b-2 border-white pb-2 inline-block">{t("footer.services")}</h3>
             <ul className="space-y-2 text-gray-300 mt-4">
               <li className="hover:text-white transition cursor-pointer">
@@ -53,8 +53,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Middle 2 - About Us */}
-          <div>
+          {/* Middle 2 - About Us (2 cột) */}
+          <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4 border-b-2 border-white pb-2 inline-block">{t("footer.aboutUs")}</h3>
             <ul className="space-y-2 text-gray-300 mt-4">
               <li>
@@ -85,8 +85,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right - Contact */}
-          <div>
+          {/* Right - Contact (2 cột) */}
+          <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4 border-b-2 border-white pb-2 inline-block">{t("footer.contact")}</h3>
             <ul className="space-y-3 text-gray-300 mt-4">
               <li className="flex items-start justify-center md:justify-start gap-3">
@@ -106,16 +106,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 text-center">
+        <div className="border-t border-gray-600 mt-10 pt-6 flex justify-center items-center text-sm text-gray-400">
           <p>{t("footer.copyright")}</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="hover:text-white transition">
-              {t("footer.privacyPolicy")}
-            </Link>
-            <Link href="/terms-of-use" className="hover:text-white transition">
-              {t("footer.termsOfUse")}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

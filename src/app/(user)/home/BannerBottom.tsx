@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { bannerService } from "@/services/banner.service";
+import { contactService } from "@/services/contact.service"; 
+import toast from "react-hot-toast"; // 
 import { Banner } from "@/types/banner";
 import Banner1 from "@/assets/home/image/banner/banner1.svg";
 
@@ -12,8 +14,10 @@ export default function BannerBottom() {
   const { t } = useLanguage();
   const [banners, setBanners] = useState<Banner[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // 🟩 Gọi API lấy banner theo vị trí "about"
+  // 🟩 Lấy banner
   useEffect(() => {
     const fetchBanner = async () => {
       try {
@@ -28,7 +32,7 @@ export default function BannerBottom() {
     fetchBanner();
   }, []);
 
-  // 🟦 Chạy slide nếu có nhiều banner
+  // 🟦 Auto slide
   useEffect(() => {
     if (banners.length > 1) {
       const interval = setInterval(() => {
@@ -38,11 +42,32 @@ export default function BannerBottom() {
     }
   }, [banners]);
 
+  const handleSubscribe = async () => {
+    if (!email) {
+      toast.error("Vui lòng nhập email!");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const res = await contactService.sendMessage({ email, type: "newsletter" });
+      if (res.success) {
+        toast.success("Đăng ký nhận tin thành công!");
+        setEmail("");
+      } else {
+        toast.error(res.message || "Gửi thất bại!");
+      }
+    } catch (err) {
+      toast.error("Không thể gửi email. Vui lòng thử lại sau!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const currentBanner = banners[currentIndex];
 
   return (
-    <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] overflow-hidden max-h-[400px] sm:max-h-[500px] lg:max-h-[700px] rounded-lg">
-      {/* 🔹 Background Image */}
+    <div className="relative w-full aspect-[16/9] sm:aspect-[3/1] lg:aspect-[1200/380] overflow-hidden rounded-lg">
       <motion.div
         key={currentBanner?._id || "default"}
         initial={{ opacity: 0, scale: 1.05 }}
@@ -60,43 +85,34 @@ export default function BannerBottom() {
         <div className="absolute inset-0 bg-black/30"></div>
       </motion.div>
 
-      {/* 🔹 Overlay Text + Input */}
+      {/* Overlay nội dung */}
       <div className="absolute inset-0 flex items-center justify-center px-4">
         <div className="text-center text-white max-w-2xl w-full">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
             {t("home.bannerBottom.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl mb-6">
             {t("home.bannerBottom.subtitle")}
           </p>
 
-          {/* 🔸 Input + Button */}
           <div className="flex flex-col sm:flex-row w-full max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
             <input
               type="email"
               placeholder={t("home.bannerBottom.placeholder")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="flex-1 px-4 py-3 text-gray-700 focus:outline-none text-sm sm:text-base"
             />
-            <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-[#247749] text-white font-semibold hover:opacity-90 transition text-sm sm:text-base">
-              {t("home.bannerBottom.button")}
+            <button
+              onClick={handleSubscribe}
+              disabled={loading}
+              className="px-6 py-3 bg-gradient-to-r from-green-500 to-[#247749] text-white font-semibold hover:opacity-90 transition text-sm sm:text-base disabled:opacity-70"
+            >
+              {loading ? "..." : t("home.bannerBottom.button")}
             </button>
           </div>
         </div>
       </div>
-
-      {/* 🔹 Dots nếu có nhiều banner */}
-      {banners.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
-          {banners.map((_, idx) => (
-            <div
-              key={idx}
-              className={`w-3 h-3 rounded-full transition-all ${
-                idx === currentIndex ? "bg-green-500 scale-125" : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 }

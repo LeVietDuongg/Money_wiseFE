@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "dudi-moneywise-be.onrender.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "example.com",
         port: "",
         pathname: "/**",

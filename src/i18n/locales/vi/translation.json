@@ -163,10 +163,17 @@
       "form": {
         "fullName": "Họ và tên *",
         "email": "Email *",
-         "phone": "Số điện thoại",
+        "phone": "Số điện thoại",
         "subject": "Chủ đề",
         "message": "Nội dung *",
-        "submit": "Gửi Tin Nhắn "
+        "submit": "Gửi Tin Nhắn →",
+        "topics": {
+          "consultation": "Tư vấn tài chính",
+          "investment": "Đầu tư",
+          "retirement": "Kế hoạch nghỉ hưu",
+          "insurance": "Bảo hiểm",
+          "other": "Khác"
+        }
       },
       "note": {
         "title": "Lưu Ý Quan Trọng:",

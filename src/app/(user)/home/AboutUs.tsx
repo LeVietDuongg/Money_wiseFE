@@ -11,7 +11,7 @@ import Person2 from "@/assets/home/about/dacap2.png";
 
 export default function AboutUs() {
   const { t } = useLanguage();
-  
+
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
@@ -40,19 +40,21 @@ export default function AboutUs() {
                 <p className="text-gray-500 text-xs sm:text-sm font-medium">
                   {t("home.aboutUs.monthlyMembers")}
                 </p>
-                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-black mt-1">5000+</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-black mt-1">
+                  5000+
+                </p>
               </div>
             </div>
 
             {/* Image 2 */}
-            <div className="relative group mt-8 sm:mt-12">
+            <div className="relative group mt-8 sm:mt-12 hidden sm:block">
               <div className="w-full h-[300px] sm:h-[350px] md:h-[420px] bg-[#E8D69F] rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
                 <Image
                   src={Person2}
                   alt="Man smiling while using phone"
                   width={250}
                   height={350}
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -79,7 +81,8 @@ export default function AboutUs() {
           <div className="md:col-span-2 flex flex-col justify-center max-w-[800px] w-full">
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
               {t("home.aboutUs.description1")}{" "}
-              <span className="font-semibold">MoneyWise</span>. {t("home.aboutUs.description2")}
+              <span className="font-semibold">MoneyWise</span>.{" "}
+              {t("home.aboutUs.description2")}
             </p>
             <div className="mt-1 text-gray-700 leading-relaxed text-sm sm:text-base space-y-1">
               <p>{t("home.aboutUs.point1")}</p>

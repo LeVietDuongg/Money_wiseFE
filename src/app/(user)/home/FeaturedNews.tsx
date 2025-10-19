@@ -1,96 +1,121 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import know from "@/assets/topic/know.png";
-import cani55 from "@/assets/topic/cani55.png";
-import begintoadvance from "@/assets/topic/begintoadvance.png";
-import mistake from "@/assets/topic/sailam.jpg";
-import lifetimemoney from "@/assets/topic/lifttimemoeny.png";
-import retail55 from "@/assets/topic/retail55.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { postService } from "@/services/post.service";
+import { Post } from "@/types/topic";
 
 export default function FeaturedNews() {
   const { t } = useLanguage();
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const news = [
-    { title: t("home.featuredNews.news1.title"), category: t("home.featuredNews.news1.category"), desc: t("home.featuredNews.news1.desc"), img: cani55 },
-    { title: t("home.featuredNews.news2.title"), category: t("home.featuredNews.news2.category"), desc: t("home.featuredNews.news2.desc"), img: mistake },
-    { title: t("home.featuredNews.news3.title"), category: t("home.featuredNews.news3.category"), desc: t("home.featuredNews.news3.desc"), img: know },
-    { title: t("home.featuredNews.news4.title"), category: t("home.featuredNews.news4.category"), desc: t("home.featuredNews.news4.desc"), img: cani55 },
-    { title: t("home.featuredNews.news5.title"), category: t("home.featuredNews.news5.category"), desc: t("home.featuredNews.news5.desc"), img: know },
-    { title: t("home.featuredNews.news6.title"), category: t("home.featuredNews.news6.category"), desc: t("home.featuredNews.news6.desc"), img: know },
-  ];
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const data = await postService.getAll();
+        setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên
+      } catch (err) {
+        console.error("Failed to load posts:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPosts();
+  }, []);
 
-  // Animation variants
-  const leftVariants: Variants = {
-    hidden: { opacity: 0, x: -60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.42, 0, 0.58, 1] } },
-  };
-
-  const rightVariants: Variants = {
-    hidden: { opacity: 0, x: 60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.42, 0, 0.58, 1] } },
-  };
+  if (loading) {
+    return (
+      <section className="py-16 bg-gray-50 text-center">
+        <p className="text-gray-500">{t("loading") || "Đang tải..."}</p>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("home.featuredNews.title")}</h2>
-          <p className="text-gray-600 text-sm md:text-base">{t("home.featuredNews.subtitle")}</p>
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {t("home.featuredNews.title")}
+          </h2>
+          <p className="text-gray-600 text-sm md:text-base">
+            {t("home.featuredNews.subtitle")}
+          </p>
         </div>
 
-        {/* News list */}
-        <div className="space-y-0">
-          {news.map((item, index) => {
-            const isRight = index % 2 === 1; // item bên phải
-            return (
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={isRight ? rightVariants : leftVariants}
-              >
-                <div className={`flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 py-12 md:py-16 ${isRight ? "md:flex-row-reverse" : ""}`}>
-                  {/* Image */}
-                  <div className="w-full md:w-1/2">
-                    <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                      <Image
-                        src={item.img}
-                        alt={item.title}
-                        className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                  </div>
-                  {/* Content */}
-                  <div className="w-full md:w-1/2 flex flex-col justify-center p-4 md:p-6">
-                    <h3 className="text-2xl font-bold text-blue-600">{item.title}</h3>
-                    <p className="text-sm font-medium text-gray-600 uppercase my-2">{item.category}</p>
-                    <p className="text-gray-600 text-base leading-relaxed">{item.desc}</p>
-                    <a href="#" className="inline-block mt-4 text-blue-600 font-semibold hover:underline">
-                      {t("home.featuredNews.readMore")}
-                    </a>
-                  </div>
+        {/* Swiper Carousel */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={24}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {posts.map((item, index) => (
+            <SwiperSlide key={index} className="h-auto flex">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                {/* Ảnh bài viết */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={item.image || "/default-image.jpg"}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
 
-                {/* Horizontal divider */}
-                {index < news.length - 1 && <hr className="border-t border-gray-300" />}
-              </motion.div>
-            );
-          })}
-        </div>
+                {/* Nội dung */}
+                <div className="flex flex-col justify-between flex-1 p-5">
+                  <div>
+                    <h3 className="text-xl font-bold text-blue-600 mb-1 line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-gray-500 uppercase mb-2">
+                      {typeof item.topic === "object" && "title" in item.topic
+                        ? item.topic.title
+                        : "Chưa có danh mục"}
+                    </p>
 
-        {/* View All Link */}
-        <div className="flex justify-center mt-12">
-          <a
-            href="topic/where-money"
+                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 min-h-[60px]">
+                      {item.excerpt || item.content?.slice(0, 120) + "..."}
+                    </p>
+                  </div>
+                  <div className="mt-4">
+                    <Link
+                      href={`/topic/where-money/post/${item._id}`}
+                      className="inline-block text-blue-600 font-semibold hover:underline text-sm"
+                    >
+                      {t("home.featuredNews.readMore")}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* View All */}
+        <div className="flex justify-center mt-10">
+          <Link
+            href="/topic/where-money"
             className="text-blue-600 font-semibold hover:underline text-lg"
           >
-            {t("home.featuredNews.viewAll")} →
-          </a>
+            {t("home.featuredNews.viewAll")} 
+          </Link>
         </div>
       </div>
     </section>

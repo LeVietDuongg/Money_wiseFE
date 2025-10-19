@@ -55,17 +55,6 @@ export default function Header({ onMenuClick }: HeaderProps) {
 
       {/* Right section */}
       <div className="flex items-center space-x-2 sm:space-x-4">
-        {/* Search bar (desktop) */}
-        <div className="relative hidden md:block">
-          <MdSearch className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
-          <Input
-            type="text"
-            placeholder="Search here"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-64 pl-10"
-          />
-        </div>
 
         {/* Notification icons */}
         <div className="flex items-center space-x-2">

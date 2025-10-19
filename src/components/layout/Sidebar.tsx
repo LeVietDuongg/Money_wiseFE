@@ -7,11 +7,11 @@ import {
   MdDashboard,
   MdFolder,
   MdDescription,
-  MdPeople,
   MdImage,
-  MdMail,
-} from 'react-icons/md';
 
+} from 'react-icons/md';
+import Image from 'next/image';
+import Logo from '../../../public/Logo.svg'
 interface SidebarItem {
   icon: React.ElementType;
   label: string;
@@ -40,19 +40,9 @@ const sidebarItems: SidebarItem[] = [
     href: '/admin/services',
   },
   {
-    icon: MdPeople,
-    label: 'Quản Lý Admin',
-    href: '/admin/admins',
-  },
-  {
     icon: MdImage,
     label: 'Quản Lý Banner',
     href: '/admin/banners',
-  },
-  {
-    icon: MdMail,
-    label: 'Quản Lý Đăng Ký',
-    href: '/admin/subscriptions',
   },
 
 ];
@@ -85,13 +75,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         {/* Logo */}
         <div className="flex h-16 items-center justify-center border-b border-gray-200">
           <div className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-              <span className="text-lg font-bold text-white">M</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-bold text-gray-900">money wise</h1>
-              <p className="text-xs text-gray-500">Smart Money Dashboard</p>
-            </div>
+          <Image 
+          width={140}
+          height={140}
+          alt='logo'
+          src={Logo}/>
           </div>
         </div>
 
