@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { bannerService } from "@/services/banner.service";
-import Card from "@/assets/home/image/banner/Card.svg";
-import UserCard from "@/assets/home/image/banner/User.svg";
+import UserCard from "@/assets/home/image/banner/card1.svg";
+import Card from "@/assets/home/image/banner/card2.svg";
 import People from "@/assets/home/image/banner/People.svg";
 import { Banner } from "@/types/banner";
 
@@ -336,7 +336,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ y: -10, rotate: 5, scale: 1.05 }}
-              className="absolute top-[15%] left-[28%] w-[90px] md:w-[140px] lg:w-[180px] z-20"
+              className="absolute top-[15%] left-[28%] w-[110px] md:w-[170px] lg:w-[220px] z-20"
             >
               {/* Glow Effect */}
               <motion.div
@@ -364,7 +364,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               whileHover={{ y: -10, rotate: -5, scale: 1.05 }}
-              className="absolute -right-12 top-36 -translate-y-1/2 w-[90px] md:w-[140px] lg:w-[180px] z-30"
+              className="absolute -right-12 top-36 -translate-y-1/2 w-[110px] md:w-[170px] lg:w-[220px] z-30"
             >
               {/* Glow Effect */}
               <motion.div
