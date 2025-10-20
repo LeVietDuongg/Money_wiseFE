@@ -88,7 +88,7 @@ export default function FeaturedNews() {
                   {/* Nội dung */}
                   <div className="flex flex-col justify-between flex-1 p-5">
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-blue-600 mb-2 line-clamp-2 min-h-[56px]">
+                      <h3 className="text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]">
                         {item.title}
                       </h3>
                       <p className="text-xs text-gray-500 uppercase mb-3">
@@ -101,7 +101,7 @@ export default function FeaturedNews() {
                         {item.excerpt || item.content?.slice(0, 120) + "..."}
                       </p>
                     </div>
-                    <div className="mt-5 pt-4">
+                    <div className="mt-4 pt-3 border-t-2 border-gray-200">
                       <Link
                         href={`/topic/${topicSlug}/post/${item._id}`}
                         className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:gap-3 transition-all text-sm"
