@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Assets
 import Person1 from "@/assets/home/about/dacap.png";
-import Person2 from "@/assets/home/about/dacap2.png";
+import Person2 from "@/assets/home/about/anhnhanvien.jpg";
 
 export default function AboutUs() {
   const { t } = useLanguage();

@@ -1,6 +1,6 @@
 "use client";
 
-import BannerImage from "@/assets/about/banner_employ.svg";
+import BannerImage from "@/assets/about/concert.jpg";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
