@@ -67,46 +67,54 @@ export default function FeaturedNews() {
             1024: { slidesPerView: 3 },
           }}
         >
-{posts.map((item, index) => (
-            <SwiperSlide key={index} className="h-auto flex">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[480px]">
-                <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
-                  <Image
-                    src={item.imageUrl || "/default-image.jpg"}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-
-                {/* Nội dung */}
-                <div className="flex flex-col justify-between flex-1 p-5">
-                       <div className="flex-1">
-                    <h3 className="text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-gray-500 uppercase mb-2">
-                      {typeof item.topic === "object" && "title" in item.topic
-                        ? item.topic.title
-                        : "Chưa có danh mục"}
-                    </p>
-
-                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[80px]">
-                      {item.excerpt || item.content?.slice(0, 120) + "..."}
-                    </p>
+{posts.map((item, index) => {
+            // Lấy topic slug từ item.topic
+            const topicSlug = typeof item.topic === "object" && "slug" in item.topic
+              ? item.topic.slug
+              : "where-money"; // fallback
+            
+            return (
+              <SwiperSlide key={index} className="h-auto flex pb-2">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[500px] w-full">
+                  <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
+                    <Image
+                      src={item.imageUrl || "/default-image.jpg"}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
                   </div>
-                  <div className="mt-4 pt-3 border-t border-gray-100">
-                    <Link
-                      href={`/topic/where-money/post/${item._id}`}
-                      className="inline-block text-blue-600 font-semibold hover:underline text-sm"
-                    >
-                      {t("home.featuredNews.readMore")}
-                    </Link>
+
+                  {/* Nội dung */}
+                  <div className="flex flex-col justify-between flex-1 p-5">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-blue-600 mb-2 line-clamp-2 min-h-[56px]">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 uppercase mb-3">
+                        {typeof item.topic === "object" && "title" in item.topic
+                          ? item.topic.title
+                          : "Chưa có danh mục"}
+                      </p>
+
+                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px]">
+                        {item.excerpt || item.content?.slice(0, 120) + "..."}
+                      </p>
+                    </div>
+                    <div className="mt-5 pt-4 border-t-2 border-gray-200">
+                      <Link
+                        href={`/topic/${topicSlug}/post/${item._id}`}
+                        className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:gap-3 transition-all text-sm"
+                      >
+                        {t("home.featuredNews.readMore")}
+                        <span>→</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         {/* View All */}

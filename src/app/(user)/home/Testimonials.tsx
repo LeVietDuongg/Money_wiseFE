@@ -68,7 +68,7 @@ export default function Testimonials() {
             }}
           >
             {testimonials.map((item, i) => (
-              <SwiperSlide key={i}>
+              <SwiperSlide key={i} className="pb-2">
                 <div
                   className="
                     bg-white rounded-2xl shadow-md 
@@ -76,29 +76,29 @@ export default function Testimonials() {
                     text-left 
                     hover:shadow-xl transition-all duration-300 
                     flex flex-col justify-between 
-                    h-[320px] sm:h-[340px] md:h-[360px]
+                    h-[380px] sm:h-[400px]
                   "
                 >
                   <div className="flex-1">
-                    <FaQuoteLeft className="text-green-600 text-2xl sm:text-3xl mb-3" />
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-5">
+                    <FaQuoteLeft className="text-green-600 text-2xl sm:text-3xl mb-4" />
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6 min-h-[144px]">
                       {item.content}
                     </p>
                   </div>
 
-                  <div className="mt-6">
-                    <div className="flex items-center gap-3">
+                  <div className="mt-6 pt-5 border-t-2 border-gray-200">
+                    <div className="flex items-center gap-3 mb-3">
                       <img
                         src={item.avatar}
                         alt={item.name}
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-green-100"
                       />
                       <div>
-                        <p className="font-semibold text-sm sm:text-base">{item.name}</p>
+                        <p className="font-semibold text-sm sm:text-base text-gray-800">{item.name}</p>
                         <p className="text-xs sm:text-sm text-gray-500">{item.title}</p>
                       </div>
                     </div>
-                    <div className="flex mt-3 text-yellow-400 text-sm sm:text-base">
+                    <div className="flex gap-1 text-yellow-400 text-base">
                       {[...Array(5)].map((_, idx) => (
                         <FaStar key={idx} />
                       ))}
