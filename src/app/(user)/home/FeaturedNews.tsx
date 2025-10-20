@@ -67,7 +67,7 @@ export default function FeaturedNews() {
         >
           {posts.map((item, index) => (
             <SwiperSlide key={index} className="h-auto flex">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[480px]">
                 {/* Ảnh bài viết */}
                 <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
                   <Image
@@ -80,7 +80,7 @@ export default function FeaturedNews() {
 
                 {/* Nội dung */}
                 <div className="flex flex-col justify-between flex-1 p-5">
-                    <div className="flex-1">
+                       <div className="flex-1">
                     <h3 className="text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]">
                       {item.title}
                     </h3>
@@ -90,11 +90,11 @@ export default function FeaturedNews() {
                         : "Chưa có danh mục"}
                     </p>
 
-                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 min-h-[60px]">
+                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[80px]">
                       {item.excerpt || item.content?.slice(0, 120) + "..."}
                     </p>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-4 pt-3 border-t border-gray-100">
                     <Link
                       href={`/topic/where-money/post/${item._id}`}
                       className="inline-block text-blue-600 font-semibold hover:underline text-sm"

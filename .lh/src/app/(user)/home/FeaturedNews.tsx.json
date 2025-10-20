@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1759720723204,
@@ -100,6 +100,22 @@
                 {
                     "date": 1760926090097,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,10 +79,10 @@\n                 </div>\r\n \r\n                 {/* Nội dung */}\r\n                 <div className=\"flex flex-col justify-between flex-1 p-5\">\r\n-                  <div>\r\n-                    <h3 className=\"text-xl font-bold text-blue-600 mb-1 line-clamp-2\">\r\n+                    <div className=\"flex-1\">\r\n+                    <h3 className=\"text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]\">\r\n                       {item.title}\r\n                     </h3>\r\n                     <p className=\"text-xs text-gray-500 uppercase mb-2\">\r\n                       {typeof item.topic === \"object\" && \"title\" in item.topic\r\n@@ -119,5 +119,5 @@\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1760926289995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n           }}\r\n         >\r\n           {posts.map((item, index) => (\r\n             <SwiperSlide key={index} className=\"h-auto flex\">\r\n-              <div className=\"bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full\">\r\n+              <div className=\"bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[480px]\">\r\n                 {/* Ảnh bài viết */}\r\n                 <div className=\"relative w-full h-[220px] overflow-hidden flex-shrink-0\">\r\n                   <Image\r\n                     src={item.image || \"/default-image.jpg\"}\r\n"
+                },
+                {
+                    "date": 1760926341364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n                 </div>\r\n \r\n                 {/* Nội dung */}\r\n                 <div className=\"flex flex-col justify-between flex-1 p-5\">\r\n-                    <div className=\"flex-1\">\r\n+                       <div className=\"flex-1\">\r\n                     <h3 className=\"text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]\">\r\n                       {item.title}\r\n                     </h3>\r\n                     <p className=\"text-xs text-gray-500 uppercase mb-2\">\r\n"
+                },
+                {
+                    "date": 1760926350452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n                         ? item.topic.title\r\n                         : \"Chưa có danh mục\"}\r\n                     </p>\r\n \r\n-                    <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-3 min-h-[60px]\">\r\n+                    <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[80px]\">\r\n                       {item.excerpt || item.content?.slice(0, 120) + \"...\"}\r\n                     </p>\r\n                   </div>\r\n                   <div className=\"mt-4\">\r\n"
+                },
+                {
+                    "date": 1760926361934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n                     <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[80px]\">\r\n                       {item.excerpt || item.content?.slice(0, 120) + \"...\"}\r\n                     </p>\r\n                   </div>\r\n-                  <div className=\"mt-4\">\r\n+                  <div className=\"mt-4 pt-3 border-t border-gray-100\">\r\n                     <Link\r\n                       href={`/topic/where-money/post/${item._id}`}\r\n                       className=\"inline-block text-blue-600 font-semibold hover:underline text-sm\"\r\n                     >\r\n"
                 }
             ],
             "date": 1759720723204,
