@@ -101,7 +101,7 @@ export default function FeaturedNews() {
                         {item.excerpt || item.content?.slice(0, 120) + "..."}
                       </p>
                     </div>
-                    <div className="mt-5 pt-4 border-t-2 border-gray-200">
+                    <div className="mt-5 pt-4">
                       <Link
                         href={`/topic/${topicSlug}/post/${item._id}`}
                         className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:gap-3 transition-all text-sm"

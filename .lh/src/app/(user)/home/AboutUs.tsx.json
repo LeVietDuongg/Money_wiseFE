@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 30,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1759718276959,
@@ -128,6 +128,10 @@
                 {
                     "date": 1760930371831,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n // Assets\r\n import Person1 from \"@/assets/home/about/dacap.png\";\r\n-import Person2 from \"@/assets/home/about/dacap2.png\";\r\n+import Person2 from \"@/assets/home/about/anhnhanvien.jpg\";\r\n \r\n export default function AboutUs() {\r\n   const { t } = useLanguage();\r\n \r\n"
+                },
+                {
+                    "date": 1760931631762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { useLanguage } from \"@/contexts/LanguageContext\";\r\n \r\n // Assets\r\n import Person1 from \"@/assets/home/about/dacap.png\";\r\n-import Person2 from \"@/assets/home/about/anhnhanvien.jpg\";\r\n+import Person2 from \"@/assets/home/about/nvvp.jpg\";\r\n \r\n export default function AboutUs() {\r\n   const { t } = useLanguage();\r\n \r\n"
                 }
             ],
             "date": 1759718276959,
