@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true, // 🚀 Tắt tối ưa ảnh để tránh lỗi sharp trên Vercel
 
 
-    // 🧠 Cho phép load ảnh từ các domain ngoài
+    // � Cho phép load ảnh từ các domain ngoài
     remotePatterns: [
       {
         protocol: "https",
