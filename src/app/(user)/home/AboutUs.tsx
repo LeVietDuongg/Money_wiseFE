@@ -25,7 +25,7 @@ export default function AboutUs() {
           <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 relative">
             {/* Image 1 */}
             <div className="relative group">
-              <div className="w-full h-[300px] sm:h-[350px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg">
+              <div className="w-full aspect-square rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <Image
                   src={Person1}
                   alt="Man looking up"
@@ -40,12 +40,12 @@ export default function AboutUs() {
 
             {/* Image 2 */}
             <div className="relative group mt-8 sm:mt-12 hidden sm:block">
-              <div className="w-full h-[300px] sm:h-[350px] md:h-[420px] bg-[#E8D69F] rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
+              <div className="w-full aspect-square rounded-2xl shadow-lg overflow-hidden bg-gray-100">
                 <Image
                   src={Person2}
                   alt="Man smiling while using phone"
-                  width={250}
-                  height={350}
+                  width={603}
+                  height={587}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
