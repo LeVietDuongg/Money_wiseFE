@@ -87,17 +87,17 @@ export default function FeaturedNews() {
 
                   {/* Nội dung */}
                   <div className="flex flex-col justify-between flex-1 p-5">
-                    <div className="flex-1 space-y-2">
-                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight mb-0.5">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-gray-500 uppercase">
+                      <p className="text-xs text-gray-500 uppercase mb-3">
                         {typeof item.topic === "object" && "title" in item.topic
                           ? item.topic.title
                           : "Chưa có danh mục"}
                       </p>
 
-                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px] pt-1">
+                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px]">
                         {item.excerpt || item.content?.slice(0, 120) + "..."}
                       </p>
                     </div>

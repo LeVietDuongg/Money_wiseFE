@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 35,
+            "activePatchIndex": 36,
             "patches": [
                 {
                     "date": 1759720723204,
@@ -148,6 +148,10 @@
                 {
                     "date": 1760934234007,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,23 +86,23 @@\n                   </div>\r\n \r\n                   {/* Nội dung */}\r\n                   <div className=\"flex flex-col justify-between flex-1 p-5\">\r\n-                    <div className=\"flex-1\">\r\n-                      <h3 className=\"text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]\">\r\n+                    <div className=\"flex-1 space-y-2\">\r\n+                      <h3 className=\"text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight\">\r\n                         {item.title}\r\n                       </h3>\r\n-                      <p className=\"text-xs text-gray-500 uppercase mb-3\">\r\n+                      <p className=\"text-xs text-gray-500 uppercase\">\r\n                         {typeof item.topic === \"object\" && \"title\" in item.topic\r\n                           ? item.topic.title\r\n                           : \"Chưa có danh mục\"}\r\n                       </p>\r\n \r\n-                      <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px]\">\r\n+                      <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px] pt-1\">\r\n                         {item.excerpt || item.content?.slice(0, 120) + \"...\"}\r\n                       </p>\r\n                     </div>\r\n-                    <div className=\"mt-4 pt-3 border-t-2 border-gray-200\">\r\n+                    <div className=\"mt-4\">\r\n                       <Link\r\n                         href={`/topic/${topicSlug}/post/${item._id}`}\r\n                         className=\"inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:gap-3 transition-all text-sm\"\r\n                       >\r\n"
+                },
+                {
+                    "date": 1760934705587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,19 +86,19 @@\n                   </div>\r\n \r\n                   {/* Nội dung */}\r\n                   <div className=\"flex flex-col justify-between flex-1 p-5\">\r\n-                    <div className=\"flex-1 space-y-2\">\r\n-                      <h3 className=\"text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight\">\r\n+                    <div className=\"flex-1\">\r\n+                      <h3 className=\"text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight mb-0.5\">\r\n                         {item.title}\r\n                       </h3>\r\n-                      <p className=\"text-xs text-gray-500 uppercase\">\r\n+                      <p className=\"text-xs text-gray-500 uppercase mb-3\">\r\n                         {typeof item.topic === \"object\" && \"title\" in item.topic\r\n                           ? item.topic.title\r\n                           : \"Chưa có danh mục\"}\r\n                       </p>\r\n \r\n-                      <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px] pt-1\">\r\n+                      <p className=\"text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px]\">\r\n                         {item.excerpt || item.content?.slice(0, 120) + \"...\"}\r\n                       </p>\r\n                     </div>\r\n                     <div className=\"mt-4\">\r\n"
                 }
             ],
             "date": 1759720723204,
