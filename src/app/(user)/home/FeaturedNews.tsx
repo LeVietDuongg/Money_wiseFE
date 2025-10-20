@@ -88,7 +88,7 @@ export default function FeaturedNews() {
                   {/* Nội dung */}
                   <div className="flex flex-col justify-between flex-1 p-5">
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2 min-h-[56px] leading-tight mb-0.5">
+                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2  leading-tight mb-0.5">
                         {item.title}
                       </h3>
                       <p className="text-xs text-gray-500 uppercase mb-3">
