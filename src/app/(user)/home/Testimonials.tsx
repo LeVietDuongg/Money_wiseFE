@@ -86,7 +86,7 @@ export default function Testimonials() {
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t-2 border-gray-200">
+                  <div className="mt-3 pt-3 border-t-2 border-gray-200">
                     <div className="flex items-center gap-3 mb-3">
                       <img
                         src={item.avatar}
