@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1759721668325,
@@ -52,6 +52,10 @@
                 {
                     "date": 1760943536038,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,9 +78,9 @@\n                     flex flex-col justify-between \r\n                     h-[380px] sm:h-[400px]\r\n                   \"\r\n                 >\r\n-                  <div className=\"flex-1\">\r\n+                  <div className=\"flex-1 max-h-[160px] md:max-h-[180px] overflow-hidden\">\r\n                     <FaQuoteLeft className=\"text-green-600 text-2xl sm:text-3xl mb-4\" />\r\n                     <p className=\"text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6 min-h-[144px]\">\r\n                       {item.content}\r\n                     </p>\r\n"
+                },
+                {
+                    "date": 1760944275964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,14 +75,14 @@\n                     p-6 sm:p-8 \r\n                     text-left \r\n                     hover:shadow-xl transition-all duration-300 \r\n                     flex flex-col justify-between \r\n-                    h-[380px] sm:h-[400px]\r\n+                    h-[320px] sm:h-[340px]\r\n                   \"\r\n                 >\r\n-                  <div className=\"flex-1 max-h-[160px] md:max-h-[180px] overflow-hidden\">\r\n-                    <FaQuoteLeft className=\"text-green-600 text-2xl sm:text-3xl mb-4\" />\r\n-                    <p className=\"text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6 min-h-[144px]\">\r\n+                  <div>\r\n+                    <FaQuoteLeft className=\"text-green-600 text-2xl sm:text-3xl mb-3\" />\r\n+                    <p className=\"text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-5\">\r\n                       {item.content}\r\n                     </p>\r\n                   </div>\r\n \r\n"
                 }
             ],
             "date": 1759721668325,

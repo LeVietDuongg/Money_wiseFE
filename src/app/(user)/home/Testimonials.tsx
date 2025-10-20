@@ -76,12 +76,12 @@ export default function Testimonials() {
                     text-left 
                     hover:shadow-xl transition-all duration-300 
                     flex flex-col justify-between 
-                    h-[380px] sm:h-[400px]
+                    h-[320px] sm:h-[340px]
                   "
                 >
-                  <div className="flex-1 max-h-[160px] md:max-h-[180px] overflow-hidden">
-                    <FaQuoteLeft className="text-green-600 text-2xl sm:text-3xl mb-4" />
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6 min-h-[144px]">
+                  <div>
+                    <FaQuoteLeft className="text-green-600 text-2xl sm:text-3xl mb-3" />
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-5">
                       {item.content}
                     </p>
                   </div>

@@ -75,7 +75,7 @@ export default function FeaturedNews() {
             
             return (
               <SwiperSlide key={index} className="h-auto flex pb-2">
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[500px] w-full">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[420px] w-full">
                   <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
                     <Image
                       src={item.imageUrl || "/default-image.jpg"}
@@ -87,17 +87,17 @@ export default function FeaturedNews() {
 
                   {/* Nội dung */}
                   <div className="flex flex-col justify-between flex-1 p-4">
-                    <div className="flex-1 max-h-[170px] md:max-h-[190px] overflow-hidden">
-                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2  leading-tight mb-0.5">
+                    <div>
+                      <h3 className="text-lg font-bold text-blue-600 line-clamp-2 leading-tight mb-0.5">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-gray-500 uppercase mb-3">
+                      <p className="text-xs text-gray-500 uppercase mb-2">
                         {typeof item.topic === "object" && "title" in item.topic
                           ? item.topic.title
                           : "Chưa có danh mục"}
                       </p>
 
-                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-4 min-h-[84px]">
+                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
                         {item.excerpt || item.content?.slice(0, 120) + "..."}
                       </p>
                     </div>
