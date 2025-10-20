@@ -21,7 +21,10 @@ export default function FeaturedNews() {
     const fetchPosts = async () => {
       try {
         const data = await postService.getAll();
-        setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên
+        // Backend trả về mảng trực tiếp
+        if (Array.isArray(data)) {
+          setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên
+        }
       } catch (err) {
         console.error("Failed to load posts:", err);
       } finally {
@@ -42,7 +45,7 @@ export default function FeaturedNews() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Heading */}
+        {/* ...phần heading... */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {t("home.featuredNews.title")}
@@ -65,13 +68,12 @@ export default function FeaturedNews() {
             1024: { slidesPerView: 3 },
           }}
         >
-          {posts.map((item, index) => (
+{posts.map((item, index) => (
             <SwiperSlide key={index} className="h-auto flex">
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[480px]">
-                {/* Ảnh bài viết */}
                 <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
                   <Image
-                    src={item.image || "/default-image.jpg"}
+                    src={item.imageUrl || "/default-image.jpg"}
                     alt={item.title}
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"

@@ -18,6 +18,7 @@ export interface Post {
   type: "image" | "video";
   image?: string;
   videoUrl?: string;
+  imageUrl: string; // thêm thuộc tính imageUrl
   content?: string;
   contentBeforeVideo?: string;
   contentAfterVideo?: string;

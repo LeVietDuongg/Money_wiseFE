@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1760079830032,
@@ -12,6 +12,10 @@
                 {
                     "date": 1760080056899,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,19 @@\n import { StaticImageData } from \"next/image\";\r\n \r\n export interface Post {\r\n   _id?: string;\r\n-  id: number;\r\n+  id?: number;\r\n   title: string;\r\n   excerpt: string;\r\n   content?: string;\r\n+  contentBeforeVideo?: string;\r\n+  contentAfterVideo?: string;\r\n   type: \"image\" | \"video\";\r\n   image?: StaticImageData | string;\r\n   videoUrl?: string;\r\n   author: string;\r\n+  topic?: string | Topic;\r\n   topicSlug?: string;\r\n   createdAt?: string;\r\n   updatedAt?: string;\r\n }\r\n@@ -18,10 +21,23 @@\n export interface Topic {\r\n   _id?: string;\r\n   slug: string;\r\n   title: string;\r\n-  subtitle: string;\r\n-  banner: StaticImageData | string;\r\n-  posts: Post[];\r\n+  subtitle?: string;\r\n+  banner?: StaticImageData | string;\r\n+  posts?: Post[];\r\n   createdAt?: string;\r\n   updatedAt?: string;\r\n }\r\n+\r\n+export interface CreatePostDTO {\r\n+  topicSlug: string;\r\n+  title: string;\r\n+  excerpt?: string;\r\n+  author: string;\r\n+  type: \"image\" | \"video\";\r\n+  image?: string;\r\n+  videoUrl?: string;\r\n+  content?: string;\r\n+  contentBeforeVideo?: string;\r\n+  contentAfterVideo?: string;\r\n+}\r\n"
+                },
+                {
+                    "date": 1760928211185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,43 +1,41 @@\n-import { StaticImageData } from \"next/image\";\r\n+// src/types/topic.ts\r\n+export interface Topic {\r\n+  _id: string;\r\n+  slug: string;\r\n+  title: string;\r\n+  subtitle?: string;\r\n+  banner?: string;\r\n+  createdAt?: string;\r\n+  updatedAt?: string;\r\n+}\r\n \r\n export interface Post {\r\n-  _id?: string;\r\n-  id?: number;\r\n+  _id: string;\r\n+  topic: Topic | string;\r\n   title: string;\r\n   excerpt: string;\r\n+  author: string;\r\n+  type: \"image\" | \"video\";\r\n+  image?: string;\r\n+  videoUrl?: string;\r\n+  imageUrl: string; // thêm thuộc tính imageUrl\r\n   content?: string;\r\n   contentBeforeVideo?: string;\r\n   contentAfterVideo?: string;\r\n-  type: \"image\" | \"video\";\r\n-  image?: StaticImageData | string;\r\n-  videoUrl?: string;\r\n-  author: string;\r\n-  topic?: string | Topic;\r\n-  topicSlug?: string;\r\n   createdAt?: string;\r\n   updatedAt?: string;\r\n }\r\n-\r\n-export interface Topic {\r\n-  _id?: string;\r\n-  slug: string;\r\n-  title: string;\r\n-  subtitle?: string;\r\n-  banner?: StaticImageData | string;\r\n-  posts?: Post[];\r\n-  createdAt?: string;\r\n-  updatedAt?: string;\r\n-}\r\n-\r\n+// src/types/topic.ts\r\n export interface CreatePostDTO {\r\n-  topicSlug: string;\r\n-  title: string;\r\n+  topicSlug: string;      // bắt buộc, backend cần\r\n+  title: string;          // bắt buộc\r\n   excerpt?: string;\r\n-  author: string;\r\n-  type: \"image\" | \"video\";\r\n+  author: string;         // bắt buộc\r\n+  type: \"image\" | \"video\"; // mặc định \"image\" nếu muốn\r\n   image?: string;\r\n   videoUrl?: string;\r\n   content?: string;\r\n   contentBeforeVideo?: string;\r\n   contentAfterVideo?: string;\r\n }\r\n+\r\n"
                 }
             ],
             "date": 1760079830032,
