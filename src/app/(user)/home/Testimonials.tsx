@@ -79,7 +79,7 @@ export default function Testimonials() {
                     h-[380px] sm:h-[400px]
                   "
                 >
-                  <div className="flex-1">
+                  <div className="flex-1 max-h-[160px] md:max-h-[180px] overflow-hidden">
                     <FaQuoteLeft className="text-green-600 text-2xl sm:text-3xl mb-4" />
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6 min-h-[144px]">
                       {item.content}

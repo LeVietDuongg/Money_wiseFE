@@ -86,8 +86,8 @@ export default function FeaturedNews() {
                   </div>
 
                   {/* Nội dung */}
-                  <div className="flex flex-col justify-between flex-1 p-5">
-                    <div className="flex-1">
+                  <div className="flex flex-col justify-between flex-1 p-4">
+                    <div className="flex-1 max-h-[170px] md:max-h-[190px] overflow-hidden">
                       <h3 className="text-lg font-bold text-blue-600 line-clamp-2  leading-tight mb-0.5">
                         {item.title}
                       </h3>
@@ -101,7 +101,7 @@ export default function FeaturedNews() {
                         {item.excerpt || item.content?.slice(0, 120) + "..."}
                       </p>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-3">
                       <Link
                         href={`/topic/${topicSlug}/post/${item._id}`}
                         className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:gap-3 transition-all text-sm"
