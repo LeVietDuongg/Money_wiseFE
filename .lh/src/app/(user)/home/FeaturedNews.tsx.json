@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 30,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1759720723204,
@@ -128,6 +128,10 @@
                 {
                     "date": 1760928565000,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\"\"use client\";\r\n+\"use client\";\r\n \r\n import { useEffect, useState } from \"react\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n@@ -19,12 +19,13 @@\n \r\n   useEffect(() => {\r\n     const fetchPosts = async () => {\r\n       try {\r\n-        // Giả sử postService.getAll() trả về { success: boolean, posts: Post[] }\r\n-        const response = await postService.getAll();\r\n-        // Hoặc nếu service đã xử lý và trả về mảng posts trực tiếp thì dùng: const postsData = await postService.getAll();\r\n-        setPosts(response.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên\r\n+        const data = await postService.getAll();\r\n+        // Backend trả về mảng trực tiếp\r\n+        if (Array.isArray(data)) {\r\n+          setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên\r\n+        }\r\n       } catch (err) {\r\n         console.error(\"Failed to load posts:\", err);\r\n       } finally {\r\n         setLoading(false);\r\n@@ -71,17 +72,12 @@\n             <SwiperSlide key={index} className=\"h-auto flex\">\r\n               <div className=\"bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-[480px]\">\r\n                 <div className=\"relative w-full h-[220px] overflow-hidden flex-shrink-0\">\r\n                   <Image\r\n-                    // 👇 **SỬA DÒNG NÀY**\r\n-                    src={item.imageUrl} // Sử dụng imageUrl đáng tin cậy từ backend\r\n+                    src={item.imageUrl || \"/default-image.jpg\"}\r\n                     alt={item.title}\r\n                     fill\r\n                     className=\"object-cover transition-transform duration-500 hover:scale-105\"\r\n-                    // Optional: Thêm fallback đề phòng API lỗi\r\n-                    onError={(e) => {\r\n-                      e.currentTarget.src = \"/default-image.jpg\";\r\n-                    }}\r\n                   />\r\n                 </div>\r\n \r\n                 {/* Nội dung */}\r\n"
+                },
+                {
+                    "date": 1760928852496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,11 @@\n   useEffect(() => {\r\n     const fetchPosts = async () => {\r\n       try {\r\n         const data = await postService.getAll();\r\n-        // Backend trả về mảng trực tiếp\r\n-        if (Array.isArray(data)) {\r\n-          setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên\r\n-        }\r\n+        // postService.getAll() đã trả về mảng posts trực tiếp\r\n+        console.log(\"📥 Fetched posts:\", data);\r\n+        setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên\r\n       } catch (err) {\r\n         console.error(\"Failed to load posts:\", err);\r\n       } finally {\r\n         setLoading(false);\r\n"
                 }
             ],
             "date": 1759720723204,

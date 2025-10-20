@@ -21,10 +21,9 @@ export default function FeaturedNews() {
     const fetchPosts = async () => {
       try {
         const data = await postService.getAll();
-        // Backend trả về mảng trực tiếp
-        if (Array.isArray(data)) {
-          setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên
-        }
+        // postService.getAll() đã trả về mảng posts trực tiếp
+        console.log("📥 Fetched posts:", data);
+        setPosts(data.slice(0, 6)); // 🔹 Lấy 6 bài đầu tiên
       } catch (err) {
         console.error("Failed to load posts:", err);
       } finally {
