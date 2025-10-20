@@ -69,7 +69,7 @@ export default function FeaturedNews() {
             <SwiperSlide key={index} className="h-auto flex">
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 {/* Ảnh bài viết */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <div className="relative w-full h-[220px] overflow-hidden flex-shrink-0">
                   <Image
                     src={item.image || "/default-image.jpg"}
                     alt={item.title}
@@ -80,8 +80,8 @@ export default function FeaturedNews() {
 
                 {/* Nội dung */}
                 <div className="flex flex-col justify-between flex-1 p-5">
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-600 mb-1 line-clamp-2">
+                    <div className="flex-1">
+                    <h3 className="text-lg font-bold text-blue-600 mb-1 line-clamp-2 min-h-[56px]">
                       {item.title}
                     </h3>
                     <p className="text-xs text-gray-500 uppercase mb-2">
